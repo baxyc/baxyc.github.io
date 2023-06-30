@@ -1,0 +1,39 @@
+// main: style.less
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover
+}
+
+.img--fixed-size {
+    width: 370px;
+    height: 300px;
+    object-fit: cover;
+
+    @media @mobile {
+        flex-basis: 50%;
+    }
+
+    @media @mobile-sm {
+        flex-basis: 100%;
+    }
+}
+
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.hide {
+    display: none;
+}

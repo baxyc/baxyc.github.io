@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js></script>
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+
+                <div class="user">
+                    <div class="user__avatar">
+                        <img src="images/123.png" width="57px" alt="">
+                    </div>
+                    <div class="user__content">
+                        <div class="user__name">
+                            Иван<br>Иванов
+                        </div>
+                        <div class="user__prof">Веб-разработик</div>
+                    </div>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="#portfolio">работы</a>
+                    <a class="nav__link" href="#about">обо мне</a>
+                    <a class="nav__link" href="#news">блог</a>
+                    <a class="nav__link  nav__link--btn" href="#" data-modal="#modal_hire_me">контакты</a>
+                </nav>
+
+                <button class="burger" type="button" id="navToggle">
+                    <img class="burger__icon" src="images/burger.svg" alt="">
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+
+            <div class="intro__inner">
+                <div class="intro__content">
+                    <h2 class="intro__subtitle">Привет, меня зовут</h2>
+                    <h1 class="intro__title">Иван Иванов</h1>
+                    <div class="intro__text">Веб-разработик</div>
+
+                    <div class="social">
+                        <a class="social__link" href="https://t.me/baxyc" target="_blank">
+                            <img src="images/tg.svg" width="40" height="40" alt="">
+                        </a>
+                        <a class="social__link" href="mailto: baxyc.da@gmail.com" target="_blank">
+                            <img src="images/gm.svg" width="40" height="40" alt="">
+                        </a>
+                        <a class="social__link" href="https://github.com/baxyc" target="_blank">
+                            <img src="images/github.svg" width="40" height="40" alt="">
+                        </a>
+                        <!--  <a class="social__link" href="#">
+                            <img src="images/facebook.svg" alt="">
+                        </a>
+                        <a class="social__link" href="#">
+                            <img src="images/instagram.svg" alt="">
+                        </a>
+                        <a class="social__link" href="#">
+                            <img src="images/twitter.svg" alt="">
+                        </a> -->
+                    </div>
+
+                    <a class="btn" href="#" data-modal="#modal_hire_me">КОНТАКТЫ</a>
+                    <button class="btn" type="button" data-modal="#modal_resume">РЕЗЮМЕ</button>
+                </div>
+
+                <img class="intro__photo" src="images/" alt="">
+            </div>
+
+
+        </div>
+        <!-- /.container -->
+
+    </section>
+    <!-- Works -->
+    <div class="works">
+        <div class="container">
+
+            <div class="works__nav">
+                <a class="works__nav-link" href="#" data-filter="All">All</a>
+                <a class="works__nav-link" href="#" data-filter="Order">Order</a>
+                <a class="works__nav-link" href="#" data-filter="Websites">Websites</a>
+                <a class="works__nav-link" href="#" data-filter="Interaction">Interaction</a>
+            </div>
+
+            <div class="portfolio" id="portfolio-all">
+                <div class="portfolio__col" data-cat="Websites">
+                    <div class="work" data-modal="#modal_project_1">
+                        <img class="img img--fixed-size" src="/images/mogo.png" height="370" width="300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">category: Web</div>
+                            <div class="work__title"> MoGo Учебна верстка
+                                <time class="work__date" datetime="2019-11-22 19:00">2018</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="Websites">
+                    <div class="work" data-modal="#modal_project_2">
+                        <img class="img img--fixed-size" src="/images/car1.jpg" height="370" width="300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">category: Web</div>
+                            <div class="work__title"> Cars Учебная верстка
+                                <time class="work__date" datetime="2019-11-22 19:00">2020</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="Order">
+                    <div class="work" data-modal="#modal_project_3">
+                        <img class="img img--fixed-size" src="/images/vit2.png" height="370" width="300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">category: Order</div>
+                            <div class="work__title"> Витрина Плюс. Доработка
+                                <time class="work__date" datetime="2019-11-22 19:00">2021</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="Order">
+                    <div class="work" data-modal="#modal_project_4">
+                        <img class="img img--fixed-size" src="images/ten2.png" height="370" width="300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">category: Order</div>
+                            <div class="work__title">
+                                Тенис 65. Доработка
+                                <time class="work__date" datetime="2019-11-22 19:00">2020</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="Interaction">
+                    <div class="work" data-modal="#modal_project_5">
+                        <img class="img img--fixed-size" src="/images/sb.png" height="370" width="300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">category: Interaction</div>
+                            <div class="work__title">
+                                копия сайта
+                                <time class="work__date" datetime="2019-11-22 19:00">2020</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <!-- <div class="about__inner"> -->
+            <!-- <div class="about__photo"> -->
+            <!-- <img class="img" src="images/designer_photo.png" alt=""> -->
+            <!-- </div> -->
+
+            <div class="about__content">
+                <h3 class="about__title">обо мне</h3>
+                <h2 class="about__bigtitle">ОБО МНЕ</h2>
+                <div class="about__text">
+                    <p>Доброго времени суток, меня зовут Иван Я занимаюсь web-разработкой с нуля, под ключ. Выполняю верстку и программирование сайтов, а так же доработку, добавляя полный функционал на сайт! Верстаю адаптивную верстку с помощью Bootstrap,
+                        таким образом сайт получается красивым на любом устройстве, будь то компьютер, ноутбук или телефон! Имеется опыт с WordPress как с нуля, так и натяжкой. </p>
+
+                </div>
+                <a class="btn" href="#" data-modal="#modal_hire_me">КОНТАКТЫ</a>
+                <button class="btn" type="button" data-modal="#modal_resume">РЕЗЮМЕ</button>
+            </div>
+            <!-- /.about__content -->
+
+        </div>
+        <!-- /.about__inner -->
+
+
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Reviews -->
+    <div class="reviews">
+
+        <div class="container">
+
+            <div class="reviews__item">
+                <div class="reviews__text">
+                    <p>Здесь Может быть ваша реклама</p>
+
+                </div>
+                <div class="reviews__author">
+                    <img class="reviews__photo" src="https://placehold.it/103/333" alt="">
+                    <div class="reviews__name">Сергей Голубцов</div>
+                    <div class="reviews__company">ИП Гога</div>
+                    <div class="reviews__rating">
+                        <img class="reviews__star" src="images/star.svg" width="13" height="13" alt="">
+                        <img class="reviews__star" src="images/star.svg" width="13" height="13" alt="">
+                        <img class="reviews__star" src="images/star.svg" width="13" height="13" alt="">
+                        <img class="reviews__star" src="images/star.svg" width="13" height="13" alt="">
+                        <img class="reviews__star reviews__star--unactive" src="images/star.svg" width="13" height="13" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- /.reviews__item -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.reviews -->
+
+    <!-- News -->
+    <section class="news">
+        <div class="container">
+
+            <div class="news__header">
+                <h3 class="news__title">
+                    <a name="news"></a>Читаем</h3>
+                <div class="news__text">Пока что тут нет ни чего интересного </div>
+            </div>
+
+            <div class="articles">
+                <div class="articles__col">
+                    <div class="articles__item">
+                        <div class="articles__header">
+                            <time class="articles__date">10<br>june</time>
+                            <a href="#">
+                                <img class="articles__photo" src="https://placehold.it/370x257" alt=""></a>
+                        </div>
+                        <div class="articles__content">
+                            <h4 class="articles__title"><a href="#">TEN THE BEST APP IN</a></h4>
+                            <div class="articles__cat">CATEGORY</div>
+                            <div class="articles__text">
+                                <p>В работе</p>
+                            </div>
+                        </div>
+                        <a class="btn btn--sm" href="#">READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="articles__col">
+                    <div class="articles__item">
+                        <div class="articles__header">
+                            <time class="articles__date">10<br>june</time>
+                            <a href="#">
+                                <img class="articles__photo" src="https://placehold.it/370x257" alt=""></a>
+                        </div>
+                        <div class="articles__content">
+                            <h4 class="articles__title"><a href="#">TEN THE BEST APP IN</a></h4>
+                            <div class="articles__cat">CATEGORY</div>
+                            <div class="articles__text">
+                                <p>В работе</p>
+                            </div>
+                        </div>
+                        <a class="btn btn--sm" href="#">READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="articles__col">
+                    <div class="articles__item">
+                        <div class="articles__header">
+                            <time class="articles__date">10<br>june</time>
+                            <a href="#">
+                                <img class="articles__photo" src="https://placehold.it/370x257" alt=""></a>
+                        </div>
+                        <div class="articles__content">
+                            <h4 class="articles__title"><a href="#">TEN THE BEST APP IN</a></h4>
+                            <div class="articles__cat">CATEGORY</div>
+                            <div class="articles__text">
+                                <p>В работе</p>
+                            </div>
+                        </div>
+                        <a class="btn btn--sm" href="#">READ MORE</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.articles -->
+
+            <div class="news__footer">
+                <a class="news___link" href="#">See mo posts</a>
+            </div>
+
+
+        </div>
+        <!-- /.container -->
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__credits">
+                    <div class="footer__copyright">
+                        &copy; 2023
+                    </div>
+
+                    <div class="footer__social">
+                        <a href="https://t.me/baxyc" target="_blank">
+                            <img src="images/tg.svg" width="24" alt="">
+                        </a>
+                        <a href="mailto: baxyc.da@gmail.com" target="_blank">
+                            <img src="images/gm.svg" width="22" alt="">
+                        </a>
+                        <a href="https://github.com/baxyc" target="_blank">
+                            <img src="images/githubw.svg" width="24" alt="">
+                        </a>
+                        <!-- <a href="#" target="_blank">
+                            <img src="images/fb-gray.svg" height="18" alt="">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="images/instagram-gray.svg" width="18" alt="">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="images/twitter-gray.svg" width="20" alt="">
+                        </a>-->
+                    </div>
+
+                </div>
+                <!-- /.footer__credits -->
+
+                <nav class="footer__nav">
+                    <a class="footer__nav-link" href="#">работы</a>
+                    <a class="footer__nav-link" href="#about">обо мне</a>
+                    <a class="footer__nav-link" href="#news">блог</a>
+                    <a class="footer__nav-link footer__nav-link--btn" href="#" data-modal="#modal_hire_me">контакты</a>
+                </nav>
+            </div>
+            <!-- /.footer__inner -->
+
+        </div>
+        <!-- /.container -->
+
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="modal_project_1">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+            <img src="images/cl.png" height="35" alt="Close">
+        </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="img" src="/images/mogo.png" height="500" width="780" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-work__content">
+
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">верстка по шаблону</h3>
+                        <div class="modal-work__info">
+                            web <span class="modal-work__info-divider">|</span>2018
+                        </div>
+                    </div>
+
+                    <div class="modal-work__client">
+                        <div class="modal-work__info-title">Client</div>
+                        <div class="modal-work__info-company">Creative agency</div>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>Простая верстка по макету фигма</p>
+                        <a href="/mogo/index.html" target="_blank">"тут"</a>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn" type="button" slickPrev><img src="images/back.svg" height="12" alt=""> Previous</button>
+                        <button class="modal-work__btn" type="button" slickNext>Next <img src="images/next.svg" height="12" alt=""></button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- /.modal-work__content -->
+            </div>
+            <!--/.modal-work -->
+
+        </div>
+
+
+        <!-- /.modal__dialog -->
+    </div>
+
+    <div class="modal" id="modal_project_2">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/cl.png" height="35" alt="Close">
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="img" src="/images/car1.jpg" height="500" width="850" alt="">
+                        </div>
+                        <div>
+                            <img class="img" src="" alt=" ">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-work__content ">
+
+                    <div class="modal-work__header ">
+                        <h3 class="modal-work__title ">Верстка по макету</h3>
+                        <div class="modal-work__info ">
+                            web <span class="modal-work__info-divider ">|</span>2020
+                        </div>
+                    </div>
+
+                    <div class="modal-work__client ">
+                        <div class="modal-work__info-title ">Client</div>
+                        <div class="modal-work__info-company ">Creative agency</div>
+                    </div>
+
+                    <div class="modal-work__text ">
+                        <p>Простая верстка по макету фигма</p>
+                        <a href="/cars/index.html " target="_blank ">"тут "</a>
+                    </div>
+
+                    <div class="modal-work__footer ">
+                        <button class="modal-work__btn slickPrev " type="button " slickPrev><img src="images/back.svg " height="12 " alt=" "> Previous</button>
+                        <button class="modal-work__btn slickNext " type="button " slickNext>Next <img src="images/next.svg " height="12 " alt=" "></button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- /.modal-work__content -->
+            </div>
+            <!--/.modal-work -->
+
+        </div>
+
+
+        <!-- /.modal__dialog -->
+    </div>
+    <div class="modal" id="modal_project_3">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/cl.png" height="35" alt="Close">
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="img" src="/images/vit.png" height="3500" width="480" alt="">
+                        </div>
+                        <div>
+                            <img class="img" src="/images/vit2.png" height="500" width="780" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-work__content ">
+
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Правки</h3>
+                        <div class="modal-work__info">
+                            Order <span class="modal-work__info-divider">|</span>2021
+                        </div>
+                    </div>
+
+                    <div class="modal-work__client">
+                        <div class="modal-work__info-title">ООО "Витрина Плюс "</div>
+                        <div class="modal-work__info-company">Торговое оборудование. От замера до монтажа.</div>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>Переделка сайта по ТЗ заказчика.</p>
+                        <a href="https://vitrina-plus.ru/ " target="_blank ">"Ссылка на сайт"</a>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button" slickPrev><img src="images/back.svg" height="12" alt=""> Previous</button>
+                        <button class="modal-work__btn slickNext" type="button" slickNext>Next <img src="images/next.svg" height="12" alt=""></button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- /.modal-work__content -->
+            </div>
+            <!--/.modal-work -->
+
+        </div>
+    </div>
+    <!-- /.modal__dialog -->
+
+    <div class="modal" id="modal_project_4">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+            <img src="images/cl.png" height="35" alt="Close">
+        </button>
+
+            <div class="modal-work ">
+                <div class="modal-work__preview ">
+                    <div data-slider="slick ">
+                        <div>
+                            <img class="img " src="/images/ten.png " height="350 " width="480 " alt=" ">
+                        </div>
+                        <div>
+                            <img class="img " src="/images/ten2.png " height="500 " width="780 " alt=" ">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-work__content ">
+
+                    <div class="modal-work__header ">
+                        <h3 class="modal-work__title ">Правки</h3>
+                        <div class="modal-work__info ">
+                            Order <span class="modal-work__info-divider ">|</span>2016
+                        </div>
+                    </div>
+
+                    <div class="modal-work__client ">
+                        <div class="modal-work__info-title ">Тенисный-Клуб Хакайдо</div>
+                        <div class="modal-work__info-company ">Тенисный-Клуб</div>
+                    </div>
+
+                    <div class="modal-work__text ">
+                        <p>Верстка по макету заказчика</p>
+                        <a href="https://tennis65.ru/ " target="_blank ">"Ссылка на сайт "</a>
+                    </div>
+
+                    <div class="modal-work__footer ">
+                        <button class="modal-work__btn slickPrev " type="button " slickPrev><img src="images/back.svg " height="12 " alt=" "> Previous</button>
+                        <button class="modal-work__btn slickNext " type="button " slickNext>Next <img src="images/next.svg " height="12 " alt=" "></button>
+                    </div>
+                </div>
+                <!-- /.modal-work__content -->
+            </div>
+            <!--/.modal-work -->
+        </div>
+        <!-- /.modal__dialog -->
+    </div>
+
+    <div class="modal" id="modal_project_5">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+            <img src="images/cl.png" height="35" alt="Close">
+        </button>
+
+            <div class="modal-work ">
+                <div class="modal-work__preview ">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="img" src="/images/sb.png" height="3500" width="480" alt="">
+                        </div>
+                        <div>
+                            <img class="img" src="/images/sb1.png" height="500" width="780" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-work__content ">
+
+                    <div class="modal-work__header ">
+                        <h3 class="modal-work__title ">Копия</h3>
+                        <div class="modal-work__info ">
+                            Order <span class="modal-work__info-divider ">|</span>2020
+                        </div>
+                    </div>
+
+                    <div class="modal-work__client ">
+                        <div class="modal-work__info-title ">Starbucks</div>
+                        <div class="modal-work__info-company ">Starbucks</div>
+                    </div>
+
+                    <div class="modal-work__text ">
+                        <p>Копия сайта</p>
+                        <a href="/starbucks/index.html" target="_blank ">"Ссылка на сайт "</a>
+                    </div>
+
+                    <div class="modal-work__footer ">
+                        <button class="modal-work__btn slickPrev " type="button " slickPrev><img src="images/back.svg " height="12 " alt=" "> Previous</button>
+                        <button class="modal-work__btn slickNext " type="button " slickNext>Next <img src="images/next.svg " height="12 " alt=" "></button>
+                    </div>
+                </div>
+                <!-- /.modal-work__content -->
+            </div>
+            <!--/.modal-work -->
+        </div>
+        <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+    </div>
+    <div class="modal" id="modal_resume">
+        <div class="modal__dialog">
+
+
+            <button class="modal__close" type="button " data-close>
+            <img src="images/cl.png " height="35 " alt="Close ">
+        </button>
+            <div class="modal__content">
+                <h3 class="modal__title text-center">Резюм</h3>
+
+                <div class="text-center ">
+                    <a class="btn btn--thin" href="/re/re.pdf">Печать</a>
+                    <a class="btn btn--thin" href="/re/re.pdf">Скачать</a>
+                </div>
+
+                <div class="timeline ">
+                    <div class="timeline__col timeline__col--left ">
+                        <h4 class="timeline__title ">ОПЫТ РАБОТЫ</h4>
+
+                        <div class="timeline__item ">
+                            <time class="timeline__date " datetime="11-12-2018 ">03.2020 <b> по настоящее время</b> </time>
+                            <h5 class="timeline__subtitle ">ООО АвтоЛюксКар</h5>
+                            <div class="timeline__position ">Заместитель генерального директора по производству</div>
+                            <div class="timeline__text ">
+                                <p>Контроль документа оборота, постановка задач сотрудникам компании, выдача зарплаты сотрудникам, контроль приема товара и отгрузки, поддержка работы компании, заключаете договоров с клиентами.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item ">
+                            <time class="timeline__date " datetime="11-12-2018 ">10.2018 <b>03.2020</b> </time>
+                            <h5 class="timeline__subtitle ">ООО СтепКор</h5>
+                            <div class="timeline__position ">Управляющий комплексом</div>
+                            <div class="timeline__text ">
+                                <p>В подчинение 45 человек. Обеспечение бесперебойной работы автокомплекса. Контроль выхода смен персонала автомойки, шиномонтажа, АЗС, технического персонала. Оперативное руководство автокомплексом. Контроль технического
+                                    состояния оборудования. Решение оперативных хозяйственных вопросов. Контроль за поддержанием чистоты и порядка на автокомплексе. Решение оперативных вопросов с клиентами. Обеспечение сохранности оборудования и вверенных
+                                    средств.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline__item ">
+                            <time class="timeline__date " datetime="11-12-2018 ">06.2016 <b>09.2018</b> </time>
+                            <h5 class="timeline__subtitle ">ООО Восток Дистрибьешн</h5>
+                            <div class="timeline__position ">Супервайзер торговых представителей</div>
+                            <div class="timeline__text ">
+                                <p>Развитие маршрута, отработка маршрута, переговоры на уровне первых лиц, выполнение планов 5 подчинённых
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item ">
+                            <time class="timeline__date " datetime="11-12-2018 ">03.2013 <b>02.2016</b> </time>
+                            <h5 class="timeline__subtitle ">ОАО СК альянс</h5>
+                            <div class="timeline__position ">Руководитель банковского страхования</div>
+                            <div class="timeline__text ">
+                                <p>Выполнение планов по страхованию, консультирование сотрудников банка, тренинги для сотрудников банков, расстановка задач для менеджеров компании. 2 подчинённых
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="timeline__col timeline__col--right ">
+                        <h4 class="timeline__title ">ОБРАЗОВАНИЕ</h4>
+
+                        <div class="timeline__item ">
+                            <time class="timeline__date " datetime="11-12-2018 ">2008- <b>2013</b> </time>
+                            <h5 class="timeline__subtitle ">Современная гуманитарная академия, Москва</h5>
+                            <div class="timeline__position ">Юридический факультет</div>
+
+                        </div>
+
+                        <div class="timeline__item ">
+                            <time class="timeline__date " datetime="11-12-2018 ">2022 <b>по настоящее время</b> </time>
+                            <h5 class="timeline__subtitle ">GeekBrains</h5>
+                            <div class="timeline__position ">Разработчик</div>
+
+                        </div>
+
+                        <h4 class="timeline__title ">Знания</h4>
+                        <div class="progress-bar ">
+                            <div class="timeline__text ">
+                                <p>Знаю такие языки программирования,как:Python, C#, Java, JavaScript.Языки разметки: HTML(5), таблицы стилей CSS(3). Умею верстать адаптивные сайты под планшеты и мобильные устройства, фраемворк Bootstrap. Также знаю библиотеку
+                                    jQuery!
+                                </p>
+                            </div>
+
+                            <h4 class="timeline__title ">Самообразование</h4>
+                            <div class="timeline__text ">
+                                <p> Курсы в интернете, видеокурсы, книги, документация, форумы, статьи.</p>
+                            </div>
+
+                        </div>
+                        <!-- /.progress-bar -->
+
+                    </div>
+                    <!-- /.timeline__col -->
+                </div>
+                <!-- /.timeline -->
+
+
+                <div class="text-center">
+                    <a class="btn" href="#" data-modal="#modal_hire_me">Найми меня</a>
+                </div>
+
+            </div>
+            <!-- /.modal__content -->
+
+
+
+
+        </div>
+        <!-- /.modal__dialog -->
+
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal" id="modal_hire_me">
+        <div class="modal__dialog modal__dialog--sm">
+
+            <button class="modal__close" type="button" data-close>
+            <img src="images/cl.png " height="35 " alt="Close ">
+        </button>
+
+            <div class="contact">
+                <div class="contact__left">
+                    <h3 class="modal__title mb-0">связь</h3>
+                    <h4 class="modal__subtitle">Позвони мне</h4>
+
+                    <ul class="contact__info ">
+                        <li class="contact__info-item "><img class="contact__info-icon " src="images/phone.svg " alt=" "> +7 924 289 1616</li>
+                        <li class="contact__info-item "><img class="contact__info-icon " src="images/mail.svg " alt=" "> baxyc.da@gmail.com
+                        </li>
+                    </ul>
+
+                    <form class="form " action="/ " method="post ">
+                        <div class="form__group ">
+                            <label class="form__label " for="input-email ">Adress e-mail</label>
+                            <input class="form__input " name="input-email " type="text " id="input-email " placeholder="e-mail ">
+                        </div>
+
+                        <div class="form__group ">
+                            <label class="form__label " for="input-text ">Текс</label>
+                            <textarea class="form__textarea " name="input-text " id="input-text " placeholder="Введите запрос "></textarea>
+                        </div>
+
+                        <div class="text__right ">
+                            <button class="btn " type="submit ">Временно не доступно</button>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- /.contact__left -->
+            </div>
+            <!-- /.contact -->
+
+        </div>
+        <!-- /.modal__dialog -->
+
+
+
+    </div>
+    <!-- /.modal -->
+    <!-- JS -->
+    <script src="/js/slick.min.js "></script>
+    <script src="/js/app.js "></script>
+</body>
+
+</html>
