@@ -1,796 +1,291 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio</title>
-    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js></script>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Иван Иванов — Frontend & Web Developer</title>
+<meta name="description" content="Портфолио Ивана Иванова — веб-разработчика. Адаптивная вёрстка на Bootstrap, программирование сайтов под ключ, WordPress. Проекты, навыки, контакты.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230d1117'/><text x='50%' y='60%' font-size='34' text-anchor='middle' fill='%236ea8fe' font-family='monospace' font-weight='bold'>&lt;/&gt;</text></svg>">
+<style>
+:root{
+  --bg:#0b0e14; --bg2:#0f131c; --panel:#131824; --panel2:#171d2b;
+  --ink:#e7edf6; --muted:#8b98ad; --line:rgba(255,255,255,.08);
+  --a1:#6ea8fe; --a2:#a374ff; --a3:#4fd1c5;
+  --grad:linear-gradient(120deg,var(--a1),var(--a2) 55%,var(--a3));
+  --maxw:1120px; --r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+h1,h2,h3{margin:0;letter-spacing:-.02em;line-height:1.05}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--a1)}
+.section{padding:100px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:40px;flex-wrap:wrap}
+.section-head h2{font-size:clamp(28px,4.5vw,44px)}
+.section-head p{color:var(--muted);max-width:440px;margin:0}
 
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .row{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800}
+.logo .m{width:34px;height:34px;border-radius:9px;background:var(--grad);display:grid;place-items:center;color:#0b0e14;font-family:"JetBrains Mono",monospace;font-weight:700;font-size:15px}
+.logo b{font-size:16px}
+.menu{display:flex;gap:26px}
+.menu a{color:var(--muted);font-size:14.5px;font-weight:500;transition:color .15s}
+.menu a:hover{color:var(--ink)}
+.nav .cta{display:flex;gap:10px;align-items:center}
+.iconbtn{width:40px;height:40px;border-radius:11px;border:1px solid var(--line);background:var(--panel);display:grid;place-items:center;color:var(--muted);transition:.15s}
+.iconbtn:hover{color:var(--ink);border-color:var(--a1)}
+.iconbtn svg{width:19px;height:19px}
+.burger{display:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;border-radius:12px;padding:13px 22px;cursor:pointer;border:1px solid transparent;transition:transform .15s,box-shadow .15s,background .15s}
+.btn-g{background:var(--grad);color:#0b0e14;box-shadow:0 10px 30px rgba(110,168,254,.25)}
+.btn-g:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(163,116,255,.35)}
+.btn-o{background:var(--panel);color:var(--ink);border-color:var(--line)}
+.btn-o:hover{border-color:var(--a1)}
+
+/* hero */
+.hero{position:relative;padding:96px 0 90px;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 300px at 15% 0%,rgba(110,168,254,.14),transparent 60%),
+  radial-gradient(600px 320px at 90% 20%,rgba(163,116,255,.14),transparent 60%);pointer-events:none}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:1}
+.hero .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--panel);border-radius:30px;padding:7px 14px;font-size:13px;color:var(--muted);margin-bottom:22px}
+.hero .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--a3);box-shadow:0 0 10px var(--a3)}
+.hero h1{font-size:clamp(40px,7vw,76px);font-weight:900}
+.hero .role{font-size:clamp(18px,2.4vw,24px);color:var(--muted);margin:14px 0 18px;font-weight:500}
+.hero .role b{color:var(--ink);font-weight:700}
+.hero p.desc{color:var(--muted);max-width:520px;font-size:17px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--muted);border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:6px 11px}
+/* code card */
+.codecard{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 70px rgba(0,0,0,.5);overflow:hidden;font-family:"JetBrains Mono",monospace;font-size:13.5px}
+.codecard .bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);color:var(--muted)}
+.codecard .bar i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.codecard pre{margin:0;padding:20px;overflow:auto;line-height:1.75;color:#c7d3e6}
+.k{color:var(--a2)}.s{color:var(--a3)}.p{color:var(--a1)}.c{color:#5b6b82}
+
+/* works */
+.works .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.wcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s;display:flex;flex-direction:column}
+.wcard:hover{transform:translateY(-6px);border-color:rgba(110,168,254,.5);box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.wthumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0a0d13}
+.wthumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease}
+.wcard:hover .wthumb img{transform:scale(1.05)}
+.wthumb .cat{position:absolute;top:12px;left:12px;background:rgba(11,14,20,.75);backdrop-filter:blur(4px);border:1px solid var(--line);color:var(--a1);font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.06em;padding:5px 10px;border-radius:8px;text-transform:uppercase}
+.wbody{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.wbody h3{font-size:19px}
+.wbody .meta{color:var(--muted);font-size:14px;margin:0}
+.wtags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.wtags span{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--muted);background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:4px 8px}
+.wlink{display:inline-flex;align-items:center;gap:7px;color:var(--a1);font-weight:700;font-size:14px;margin-top:6px}
+.wlink:hover{color:var(--a2)}
+
+/* about + stats */
+.about .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.about p{color:var(--muted);font-size:17px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.stat b{font-family:"JetBrains Mono",monospace;font-size:30px;display:block;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--muted);font-size:13.5px}
+
+/* skills */
+.skills{background:var(--bg2)}
+.skillgroups{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.sgroup{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.sgroup h3{font-size:15px;color:var(--a1);margin-bottom:14px;font-family:"JetBrains Mono",monospace;letter-spacing:.04em}
+.sgroup .list{display:flex;flex-wrap:wrap;gap:9px}
+.sgroup .list span{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 14px;font-size:14px;font-weight:500}
+
+/* contact */
+.contact{text-align:center}
+.contact .big{font-size:clamp(30px,6vw,58px);font-weight:900;max-width:820px;margin:0 auto 18px}
+.contact p{color:var(--muted);max-width:520px;margin:0 auto 30px;font-size:17px}
+.contact .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px}
+footer .row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer .socials{display:flex;gap:14px}
+footer .socials a:hover{color:var(--a1)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .menu{display:none}
+  .hero .grid,.about .grid{grid-template-columns:1fr;gap:34px}
+  .works .grid{grid-template-columns:1fr 1fr}
+  .codecard{order:-1}
+  .burger{display:grid}
+}
+@media(max-width:600px){
+  .section{padding:64px 0}
+  .wrap{padding:0 18px}
+  .works .grid,.skillgroups,.stats{grid-template-columns:1fr}
+  .hero{padding:60px 0}
+  .nav .cta .iconbtn:nth-child(3){display:none}
+}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
 <body>
 
-
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-
-                <div class="user">
-                    <div class="user__avatar">
-                        <img src="images/123.png" width="57px" alt="">
-                    </div>
-                    <div class="user__content">
-                        <div class="user__name">
-                            Иван<br>Иванов
-                        </div>
-                        <div class="user__prof">Веб-разработик</div>
-                    </div>
-                </div>
-
-                <nav class="nav" id="nav">
-                    <a class="nav__link" href="#portfolio">работы</a>
-                    <a class="nav__link" href="#about">обо мне</a>
-                    <a class="nav__link" href="#news">блог</a>
-                    <a class="nav__link  nav__link--btn" href="#" data-modal="#modal_hire_me">контакты</a>
-                </nav>
-
-                <button class="burger" type="button" id="navToggle">
-                    <img class="burger__icon" src="images/burger.svg" alt="">
-                </button>
-
-            </div>
-        </div>
-    </header>
-
-    <!-- Intro -->
-    <section class="intro">
-        <div class="container">
-
-            <div class="intro__inner">
-                <div class="intro__content">
-                    <h2 class="intro__subtitle">Привет, меня зовут</h2>
-                    <h1 class="intro__title">Иван Иванов</h1>
-                    <div class="intro__text">Веб-разработик</div>
-
-                    <div class="social">
-                        <a class="social__link" href="https://t.me/baxyc" target="_blank">
-                            <img src="images/tg.svg" width="40" height="40" alt="">
-                        </a>
-                        <a class="social__link" href="mailto: baxyc.da@gmail.com" target="_blank">
-                            <img src="images/gm.svg" width="40" height="40" alt="">
-                        </a>
-                        <a class="social__link" href="https://github.com/baxyc" target="_blank">
-                            <img src="images/github.svg" width="40" height="40" alt="">
-                        </a>
-                        <!--  <a class="social__link" href="#">
-                            <img src="images/facebook.svg" alt="">
-                        </a>
-                        <a class="social__link" href="#">
-                            <img src="images/instagram.svg" alt="">
-                        </a>
-                        <a class="social__link" href="#">
-                            <img src="images/twitter.svg" alt="">
-                        </a> -->
-                    </div>
-
-                    <a class="btn" href="#" data-modal="#modal_hire_me">КОНТАКТЫ</a>
-                    <button class="btn" type="button" data-modal="#modal_resume">РЕЗЮМЕ</button>
-                </div>
-
-                <img class="intro__photo" src="images/" alt="">
-            </div>
-
-
-        </div>
-        <!-- /.container -->
-
-    </section>
-    <!-- Works -->
-    <div class="works">
-        <div class="container">
-
-            <div class="works__nav">
-                <a class="works__nav-link" href="#" data-filter="All">All</a>
-                <a class="works__nav-link" href="#" data-filter="Order">Order</a>
-                <a class="works__nav-link" href="#" data-filter="Websites">Websites</a>
-                <a class="works__nav-link" href="#" data-filter="Interaction">Interaction</a>
-            </div>
-
-            <div class="portfolio" id="portfolio-all">
-                <div class="portfolio__col" data-cat="Websites">
-                    <div class="work" data-modal="#modal_project_1">
-                        <img class="img img--fixed-size" src="/images/mogo.png" height="370" width="300" alt="">
-                        <div class="work__content">
-                            <div class="work__cat">category: Web</div>
-                            <div class="work__title"> MoGo Учебна верстка
-                                <time class="work__date" datetime="2019-11-22 19:00">2018</time>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio__col" data-cat="Websites">
-                    <div class="work" data-modal="#modal_project_2">
-                        <img class="img img--fixed-size" src="/images/car1.jpg" height="370" width="300" alt="">
-                        <div class="work__content">
-                            <div class="work__cat">category: Web</div>
-                            <div class="work__title"> Cars Учебная верстка
-                                <time class="work__date" datetime="2019-11-22 19:00">2020</time>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio__col" data-cat="Order">
-                    <div class="work" data-modal="#modal_project_3">
-                        <img class="img img--fixed-size" src="/images/vit2.png" height="370" width="300" alt="">
-                        <div class="work__content">
-                            <div class="work__cat">category: Order</div>
-                            <div class="work__title"> Витрина Плюс. Доработка
-                                <time class="work__date" datetime="2019-11-22 19:00">2021</time>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio__col" data-cat="Order">
-                    <div class="work" data-modal="#modal_project_4">
-                        <img class="img img--fixed-size" src="images/ten2.png" height="370" width="300" alt="">
-                        <div class="work__content">
-                            <div class="work__cat">category: Order</div>
-                            <div class="work__title">
-                                Тенис 65. Доработка
-                                <time class="work__date" datetime="2019-11-22 19:00">2020</time>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio__col" data-cat="Interaction">
-                    <div class="work" data-modal="#modal_project_5">
-                        <img class="img img--fixed-size" src="/images/sb.png" height="370" width="300" alt="">
-                        <div class="work__content">
-                            <div class="work__cat">category: Interaction</div>
-                            <div class="work__title">
-                                копия сайта
-                                <time class="work__date" datetime="2019-11-22 19:00">2020</time>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio__col" data-cat="Websites">
-                    <div class="work" onclick="window.location='easydoc/index.html'" style="cursor:pointer">
-                        <img class="img img--fixed-size" src="/images/easydoc.png" height="370" width="300" alt="EasyDoc China — образование в Китае">
-                        <div class="work__content">
-                            <div class="work__cat">category: Web</div>
-                            <div class="work__title">
-                                EasyDoc China — образование в Китае
-                                <time class="work__date" datetime="2026-11-15 19:00">2026</time>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<header class="nav">
+  <div class="wrap row">
+    <a class="logo" href="#top"><span class="m">&lt;/&gt;</span><b>Иван Иванов</b></a>
+    <nav class="menu">
+      <a href="#works">Работы</a>
+      <a href="#about">Обо мне</a>
+      <a href="#skills">Навыки</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="cta">
+      <a class="iconbtn" href="https://github.com/baxyc" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+      <a class="iconbtn" href="https://t.me/baxyc" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.04 15.5 8.9 19.9c.4 0 .58-.17.79-.38l1.9-1.82 3.94 2.88c.72.4 1.23.19 1.42-.66l2.58-12.1c.23-1.06-.38-1.47-1.08-1.21L3.3 9.65C2.28 10.08 2.29 10.63 3.2 10.94l3.2 1 7.42-4.67c.35-.22.66-.1.4.14z"/></svg></a>
+      <a class="iconbtn" href="mailto:baxyc.da@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
     </div>
+  </div>
+</header>
 
-    <!-- About -->
-    <section class="about" id="about">
-
-        <div class="container">
-
-            <!-- <div class="about__inner"> -->
-            <!-- <div class="about__photo"> -->
-            <!-- <img class="img" src="images/designer_photo.png" alt=""> -->
-            <!-- </div> -->
-
-            <div class="about__content">
-                <h3 class="about__title">обо мне</h3>
-                <h2 class="about__bigtitle">ОБО МНЕ</h2>
-                <div class="about__text">
-                    <p>Доброго времени суток, меня зовут Иван Я занимаюсь web-разработкой с нуля, под ключ. Выполняю верстку и программирование сайтов, а так же доработку, добавляя полный функционал на сайт! Верстаю адаптивную верстку с помощью Bootstrap,
-                        таким образом сайт получается красивым на любом устройстве, будь то компьютер, ноутбук или телефон! Имеется опыт с WordPress как с нуля, так и натяжкой. </p>
-
-                </div>
-                <a class="btn" href="#" data-modal="#modal_hire_me">КОНТАКТЫ</a>
-                <button class="btn" type="button" data-modal="#modal_resume">РЕЗЮМЕ</button>
-            </div>
-            <!-- /.about__content -->
-
-        </div>
-        <!-- /.about__inner -->
-
-
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- Reviews -->
-    <div class="reviews">
-
-        <div class="container">
-
-            <div class="reviews__item">
-                <div class="reviews__text">
-                    <p>Здесь Может быть ваша реклама</p>
-
-                </div>
-                <div class="reviews__author">
-                    <img class="reviews__photo" src="https://placehold.it/103/333" alt="">
-                    <div class="reviews__name">Сергей Голубцов</div>
-                    <div class="reviews__company">ИП Гога</div>
-                    <div class="reviews__rating">
-                        <img class="reviews__star" src="images/star.svg" width="13" height="13" alt="">
-                        <img class="reviews__star" src="images/star.svg" width="13" height="13" alt="">
-                        <img class="reviews__star" src="images/star.svg" width="13" height="13" alt="">
-                        <img class="reviews__star" src="images/star.svg" width="13" height="13" alt="">
-                        <img class="reviews__star reviews__star--unactive" src="images/star.svg" width="13" height="13" alt="">
-                    </div>
-                </div>
-            </div>
-            <!-- /.reviews__item -->
-        </div>
-        <!-- /.container -->
+<section class="hero" id="top">
+  <div class="wrap grid">
+    <div>
+      <span class="badge"><span class="dot"></span> Открыт для проектов</span>
+      <h1>Привет, я <span class="grad-text">Иван</span></h1>
+      <div class="role"><b>Frontend &amp; Web Developer.</b> Собираю сайты с нуля — под ключ.</div>
+      <p class="desc">Адаптивная вёрстка, программирование и доработка сайтов с полным функционалом. Аккуратно, современно и на любом устройстве.</p>
+      <div class="actions">
+        <a class="btn btn-g" href="#works">Смотреть работы</a>
+        <a class="btn btn-o" href="#contact">Связаться</a>
+      </div>
+      <div class="chips">
+        <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span class="chip">Bootstrap</span><span class="chip">WordPress</span>
+      </div>
     </div>
-    <!-- /.reviews -->
-
-    <!-- News -->
-    <section class="news">
-        <div class="container">
-
-            <div class="news__header">
-                <h3 class="news__title">
-                    <a name="news"></a>Читаем</h3>
-                <div class="news__text">Пока что тут нет ни чего интересного </div>
-            </div>
-
-            <div class="articles">
-                <div class="articles__col">
-                    <div class="articles__item">
-                        <div class="articles__header">
-                            <time class="articles__date">10<br>june</time>
-                            <a href="#">
-                                <img class="articles__photo" src="https://placehold.it/370x257" alt=""></a>
-                        </div>
-                        <div class="articles__content">
-                            <h4 class="articles__title"><a href="#">TEN THE BEST APP IN</a></h4>
-                            <div class="articles__cat">CATEGORY</div>
-                            <div class="articles__text">
-                                <p>В работе</p>
-                            </div>
-                        </div>
-                        <a class="btn btn--sm" href="#">READ MORE</a>
-                    </div>
-                </div>
-
-                <div class="articles__col">
-                    <div class="articles__item">
-                        <div class="articles__header">
-                            <time class="articles__date">10<br>june</time>
-                            <a href="#">
-                                <img class="articles__photo" src="https://placehold.it/370x257" alt=""></a>
-                        </div>
-                        <div class="articles__content">
-                            <h4 class="articles__title"><a href="#">TEN THE BEST APP IN</a></h4>
-                            <div class="articles__cat">CATEGORY</div>
-                            <div class="articles__text">
-                                <p>В работе</p>
-                            </div>
-                        </div>
-                        <a class="btn btn--sm" href="#">READ MORE</a>
-                    </div>
-                </div>
-
-                <div class="articles__col">
-                    <div class="articles__item">
-                        <div class="articles__header">
-                            <time class="articles__date">10<br>june</time>
-                            <a href="#">
-                                <img class="articles__photo" src="https://placehold.it/370x257" alt=""></a>
-                        </div>
-                        <div class="articles__content">
-                            <h4 class="articles__title"><a href="#">TEN THE BEST APP IN</a></h4>
-                            <div class="articles__cat">CATEGORY</div>
-                            <div class="articles__text">
-                                <p>В работе</p>
-                            </div>
-                        </div>
-                        <a class="btn btn--sm" href="#">READ MORE</a>
-                    </div>
-                </div>
-
-            </div>
-            <!-- /.articles -->
-
-            <div class="news__footer">
-                <a class="news___link" href="#">See mo posts</a>
-            </div>
-
-
-        </div>
-        <!-- /.container -->
-
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__credits">
-                    <div class="footer__copyright">
-                        &copy; 2023
-                    </div>
-
-                    <div class="footer__social">
-                        <a href="https://t.me/baxyc" target="_blank">
-                            <img src="images/tg.svg" width="24" alt="">
-                        </a>
-                        <a href="mailto: baxyc.da@gmail.com" target="_blank">
-                            <img src="images/gm.svg" width="22" alt="">
-                        </a>
-                        <a href="https://github.com/baxyc" target="_blank">
-                            <img src="images/githubw.svg" width="24" alt="">
-                        </a>
-                        <!-- <a href="#" target="_blank">
-                            <img src="images/fb-gray.svg" height="18" alt="">
-                        </a>
-                        <a href="#" target="_blank">
-                            <img src="images/instagram-gray.svg" width="18" alt="">
-                        </a>
-                        <a href="#" target="_blank">
-                            <img src="images/twitter-gray.svg" width="20" alt="">
-                        </a>-->
-                    </div>
-
-                </div>
-                <!-- /.footer__credits -->
-
-                <nav class="footer__nav">
-                    <a class="footer__nav-link" href="#">работы</a>
-                    <a class="footer__nav-link" href="#about">обо мне</a>
-                    <a class="footer__nav-link" href="#news">блог</a>
-                    <a class="footer__nav-link footer__nav-link--btn" href="#" data-modal="#modal_hire_me">контакты</a>
-                </nav>
-            </div>
-            <!-- /.footer__inner -->
-
-        </div>
-        <!-- /.container -->
-
-    </footer>
-
-    <!-- Modals -->
-    <div class="modal" id="modal_project_1">
-        <div class="modal__dialog">
-
-            <button class="modal__close" type="button" data-close>
-            <img src="images/cl.png" height="35" alt="Close">
-        </button>
-
-            <div class="modal-work">
-                <div class="modal-work__preview">
-                    <div data-slider="slick">
-                        <div>
-                            <img class="img" src="/images/mogo.png" height="500" width="780" alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal-work__content">
-
-                    <div class="modal-work__header">
-                        <h3 class="modal-work__title">верстка по шаблону</h3>
-                        <div class="modal-work__info">
-                            web <span class="modal-work__info-divider">|</span>2018
-                        </div>
-                    </div>
-
-                    <div class="modal-work__client">
-                        <div class="modal-work__info-title">Client</div>
-                        <div class="modal-work__info-company">Creative agency</div>
-                    </div>
-
-                    <div class="modal-work__text">
-                        <p>Простая верстка по макету фигма</p>
-                        <a href="/mogo/index.html" target="_blank">"тут"</a>
-                    </div>
-
-                    <div class="modal-work__footer">
-                        <button class="modal-work__btn" type="button" slickPrev><img src="images/back.svg" height="12" alt=""> Previous</button>
-                        <button class="modal-work__btn" type="button" slickNext>Next <img src="images/next.svg" height="12" alt=""></button>
-
-                    </div>
-
-                </div>
-
-
-                <!-- /.modal-work__content -->
-            </div>
-            <!--/.modal-work -->
-
-        </div>
-
-
-        <!-- /.modal__dialog -->
+    <div class="codecard">
+      <div class="bar"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i><span class="mono" style="margin-left:8px">developer.js</span></div>
+<pre><span class="c">// обо мне в коде</span>
+<span class="k">const</span> <span class="p">developer</span> = {
+  name: <span class="s">"Иван Иванов"</span>,
+  role: <span class="s">"Frontend &amp; Web Developer"</span>,
+  stack: [<span class="s">"HTML5"</span>, <span class="s">"CSS3"</span>, <span class="s">"JS"</span>,
+          <span class="s">"Bootstrap"</span>, <span class="s">"WordPress"</span>],
+  builds: <span class="s">"сайты под ключ"</span>,
+  available: <span class="k">true</span>,
+};</pre>
     </div>
+  </div>
+</section>
 
-    <div class="modal" id="modal_project_2">
-        <div class="modal__dialog">
-
-            <button class="modal__close" type="button" data-close>
-                <img src="images/cl.png" height="35" alt="Close">
-            </button>
-
-            <div class="modal-work">
-                <div class="modal-work__preview">
-                    <div data-slider="slick">
-                        <div>
-                            <img class="img" src="/images/car1.jpg" height="500" width="850" alt="">
-                        </div>
-                        <div>
-                            <img class="img" src="" alt=" ">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal-work__content ">
-
-                    <div class="modal-work__header ">
-                        <h3 class="modal-work__title ">Верстка по макету</h3>
-                        <div class="modal-work__info ">
-                            web <span class="modal-work__info-divider ">|</span>2020
-                        </div>
-                    </div>
-
-                    <div class="modal-work__client ">
-                        <div class="modal-work__info-title ">Client</div>
-                        <div class="modal-work__info-company ">Creative agency</div>
-                    </div>
-
-                    <div class="modal-work__text ">
-                        <p>Простая верстка по макету фигма</p>
-                        <a href="/cars/index.html " target="_blank ">"тут "</a>
-                    </div>
-
-                    <div class="modal-work__footer ">
-                        <button class="modal-work__btn slickPrev " type="button " slickPrev><img src="images/back.svg " height="12 " alt=" "> Previous</button>
-                        <button class="modal-work__btn slickNext " type="button " slickNext>Next <img src="images/next.svg " height="12 " alt=" "></button>
-
-                    </div>
-
-                </div>
-
-
-                <!-- /.modal-work__content -->
-            </div>
-            <!--/.modal-work -->
-
-        </div>
-
-
-        <!-- /.modal__dialog -->
+<section class="section works" id="works">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="tag">01 — Портфолио</span><h2>Избранные работы</h2></div>
+      <p>Живые проекты и вёрстка. Наведи и открой превью.</p>
     </div>
-    <div class="modal" id="modal_project_3">
-        <div class="modal__dialog">
-
-            <button class="modal__close" type="button" data-close>
-                <img src="images/cl.png" height="35" alt="Close">
-            </button>
-
-            <div class="modal-work">
-                <div class="modal-work__preview">
-                    <div data-slider="slick">
-                        <div>
-                            <img class="img" src="/images/vit.png" height="3500" width="480" alt="">
-                        </div>
-                        <div>
-                            <img class="img" src="/images/vit2.png" height="500" width="780" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-work__content ">
-
-                    <div class="modal-work__header">
-                        <h3 class="modal-work__title">Правки</h3>
-                        <div class="modal-work__info">
-                            Order <span class="modal-work__info-divider">|</span>2021
-                        </div>
-                    </div>
-
-                    <div class="modal-work__client">
-                        <div class="modal-work__info-title">ООО "Витрина Плюс "</div>
-                        <div class="modal-work__info-company">Торговое оборудование. От замера до монтажа.</div>
-                    </div>
-
-                    <div class="modal-work__text">
-                        <p>Переделка сайта по ТЗ заказчика.</p>
-                        <a href="https://vitrina-plus.ru/ " target="_blank ">"Ссылка на сайт"</a>
-                    </div>
-
-                    <div class="modal-work__footer">
-                        <button class="modal-work__btn slickPrev" type="button" slickPrev><img src="images/back.svg" height="12" alt=""> Previous</button>
-                        <button class="modal-work__btn slickNext" type="button" slickNext>Next <img src="images/next.svg" height="12" alt=""></button>
-
-                    </div>
-
-                </div>
-
-
-                <!-- /.modal-work__content -->
-            </div>
-            <!--/.modal-work -->
-
-        </div>
+    <div class="grid">
+      <a class="wcard reveal" href="easydoc/" target="_blank" rel="noopener">
+        <div class="wthumb"><span class="cat">Web · 2026</span><img src="images/easydoc.png" alt="EasyDoc China"></div>
+        <div class="wbody"><h3>EasyDoc China</h3><p class="meta">Лендинг образовательного сервиса: поступление в вузы Китая, программы, галерея с лайтбоксом.</p><div class="wtags"><span>HTML</span><span>CSS</span><span>JS</span><span>Slider</span></div><span class="wlink">Открыть проект →</span></div>
+      </a>
+      <a class="wcard reveal" href="mogo/" target="_blank" rel="noopener">
+        <div class="wthumb"><span class="cat">Web · 2018</span><img src="images/mogo.png" alt="MoGo"></div>
+        <div class="wbody"><h3>MoGo</h3><p class="meta">Учебная вёрстка одностраничного лендинга: секции, галерея, адаптив.</p><div class="wtags"><span>HTML</span><span>CSS</span><span>Responsive</span></div><span class="wlink">Открыть проект →</span></div>
+      </a>
+      <a class="wcard reveal" href="cars/" target="_blank" rel="noopener">
+        <div class="wthumb"><span class="cat">Web · 2020</span><img src="images/car1.jpg" alt="Cars"></div>
+        <div class="wbody"><h3>Cars</h3><p class="meta">Многостраничный сайт каталога автомобилей с фильтрами и формами.</p><div class="wtags"><span>HTML</span><span>CSS</span><span>JS</span><span>Bootstrap</span></div><span class="wlink">Открыть проект →</span></div>
+      </a>
+      <a class="wcard reveal" href="starbucks/" target="_blank" rel="noopener">
+        <div class="wthumb"><span class="cat">Interaction · 2020</span><img src="images/sb.png" alt="Starbucks clone"></div>
+        <div class="wbody"><h3>Starbucks — копия</h3><p class="meta">Точная копия лендинга с анимациями и интерактивными блоками.</p><div class="wtags"><span>HTML</span><span>CSS</span><span>Animation</span></div><span class="wlink">Открыть проект →</span></div>
+      </a>
+      <a class="wcard reveal" href="images/vit2.png" target="_blank" rel="noopener">
+        <div class="wthumb"><span class="cat">Доработка · 2021</span><img src="images/vit2.png" alt="Витрина Плюс"></div>
+        <div class="wbody"><h3>Витрина Плюс</h3><p class="meta">Доработка интернет-магазина: функционал и оформление карточек.</p><div class="wtags"><span>WordPress</span><span>PHP</span></div><span class="wlink">Смотреть превью →</span></div>
+      </a>
+      <a class="wcard reveal" href="images/ten2.png" target="_blank" rel="noopener">
+        <div class="wthumb"><span class="cat">Доработка · 2020</span><img src="images/ten2.png" alt="Тенис 65"></div>
+        <div class="wbody"><h3>Тенис 65</h3><p class="meta">Доработка сайта школы тенниса: структура, секции, адаптив.</p><div class="wtags"><span>HTML</span><span>CSS</span></div><span class="wlink">Смотреть превью →</span></div>
+      </a>
     </div>
-    <!-- /.modal__dialog -->
+  </div>
+</section>
 
-    <div class="modal" id="modal_project_4">
-        <div class="modal__dialog">
-
-            <button class="modal__close" type="button" data-close>
-            <img src="images/cl.png" height="35" alt="Close">
-        </button>
-
-            <div class="modal-work ">
-                <div class="modal-work__preview ">
-                    <div data-slider="slick ">
-                        <div>
-                            <img class="img " src="/images/ten.png " height="350 " width="480 " alt=" ">
-                        </div>
-                        <div>
-                            <img class="img " src="/images/ten2.png " height="500 " width="780 " alt=" ">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal-work__content ">
-
-                    <div class="modal-work__header ">
-                        <h3 class="modal-work__title ">Правки</h3>
-                        <div class="modal-work__info ">
-                            Order <span class="modal-work__info-divider ">|</span>2016
-                        </div>
-                    </div>
-
-                    <div class="modal-work__client ">
-                        <div class="modal-work__info-title ">Тенисный-Клуб Хакайдо</div>
-                        <div class="modal-work__info-company ">Тенисный-Клуб</div>
-                    </div>
-
-                    <div class="modal-work__text ">
-                        <p>Верстка по макету заказчика</p>
-                        <a href="https://tennis65.ru/ " target="_blank ">"Ссылка на сайт "</a>
-                    </div>
-
-                    <div class="modal-work__footer ">
-                        <button class="modal-work__btn slickPrev " type="button " slickPrev><img src="images/back.svg " height="12 " alt=" "> Previous</button>
-                        <button class="modal-work__btn slickNext " type="button " slickNext>Next <img src="images/next.svg " height="12 " alt=" "></button>
-                    </div>
-                </div>
-                <!-- /.modal-work__content -->
-            </div>
-            <!--/.modal-work -->
-        </div>
-        <!-- /.modal__dialog -->
+<section class="section about" id="about">
+  <div class="wrap grid">
+    <div>
+      <span class="tag">02 — Обо мне</span>
+      <h2 style="font-size:clamp(28px,4.5vw,44px);margin:.2em 0 .4em">Делаю сайты, которые <span class="grad-text">работают</span></h2>
+      <p>Занимаюсь веб-разработкой с нуля, под ключ: верстка, программирование и доработка сайтов с полным функционалом. Верстаю адаптивно на Bootstrap — сайт одинаково хорошо выглядит на компьютере, ноутбуке и телефоне. Есть опыт с WordPress: как сборка с нуля, так и натяжка готового макета.</p>
     </div>
-
-    <div class="modal" id="modal_project_5">
-        <div class="modal__dialog">
-
-            <button class="modal__close" type="button" data-close>
-            <img src="images/cl.png" height="35" alt="Close">
-        </button>
-
-            <div class="modal-work ">
-                <div class="modal-work__preview ">
-                    <div data-slider="slick">
-                        <div>
-                            <img class="img" src="/images/sb.png" height="3500" width="480" alt="">
-                        </div>
-                        <div>
-                            <img class="img" src="/images/sb1.png" height="500" width="780" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-work__content ">
-
-                    <div class="modal-work__header ">
-                        <h3 class="modal-work__title ">Копия</h3>
-                        <div class="modal-work__info ">
-                            Order <span class="modal-work__info-divider ">|</span>2020
-                        </div>
-                    </div>
-
-                    <div class="modal-work__client ">
-                        <div class="modal-work__info-title ">Starbucks</div>
-                        <div class="modal-work__info-company ">Starbucks</div>
-                    </div>
-
-                    <div class="modal-work__text ">
-                        <p>Копия сайта</p>
-                        <a href="/starbucks/index.html" target="_blank ">"Ссылка на сайт "</a>
-                    </div>
-
-                    <div class="modal-work__footer ">
-                        <button class="modal-work__btn slickPrev " type="button " slickPrev><img src="images/back.svg " height="12 " alt=" "> Previous</button>
-                        <button class="modal-work__btn slickNext " type="button " slickNext>Next <img src="images/next.svg " height="12 " alt=" "></button>
-                    </div>
-                </div>
-                <!-- /.modal-work__content -->
-            </div>
-            <!--/.modal-work -->
-        </div>
-        <!-- /.modal__dialog -->
+    <div class="stats">
+      <div class="stat reveal"><b>6+</b><span>проектов в портфолио</span></div>
+      <div class="stat reveal"><b>100%</b><span>адаптивная вёрстка</span></div>
+      <div class="stat reveal"><b>5+</b><span>технологий в стеке</span></div>
+      <div class="stat reveal"><b>под&nbsp;ключ</b><span>от макета до запуска</span></div>
     </div>
-    <!-- /.modal -->
+  </div>
+</section>
+
+<section class="section skills" id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="tag">03 — Навыки</span><h2>Чем владею</h2></div>
+      <p>Инструменты и технологии, с которыми работаю.</p>
     </div>
-    <div class="modal" id="modal_resume">
-        <div class="modal__dialog">
-
-
-            <button class="modal__close" type="button " data-close>
-            <img src="images/cl.png " height="35 " alt="Close ">
-        </button>
-            <div class="modal__content">
-                <h3 class="modal__title text-center">Резюм</h3>
-
-                <div class="text-center ">
-                    <a class="btn btn--thin" href="/re/re.pdf">Печать</a>
-                    <a class="btn btn--thin" href="/re/re.pdf">Скачать</a>
-                </div>
-
-                <div class="timeline ">
-                    <div class="timeline__col timeline__col--left ">
-                        <h4 class="timeline__title ">ОПЫТ РАБОТЫ</h4>
-
-                        <div class="timeline__item ">
-                            <time class="timeline__date " datetime="11-12-2018 ">03.2020 <b> по настоящее время</b> </time>
-                            <h5 class="timeline__subtitle ">ООО АвтоЛюксКар</h5>
-                            <div class="timeline__position ">Заместитель генерального директора по производству</div>
-                            <div class="timeline__text ">
-                                <p>Контроль документа оборота, постановка задач сотрудникам компании, выдача зарплаты сотрудникам, контроль приема товара и отгрузки, поддержка работы компании, заключаете договоров с клиентами.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item ">
-                            <time class="timeline__date " datetime="11-12-2018 ">10.2018 <b>03.2020</b> </time>
-                            <h5 class="timeline__subtitle ">ООО СтепКор</h5>
-                            <div class="timeline__position ">Управляющий комплексом</div>
-                            <div class="timeline__text ">
-                                <p>В подчинение 45 человек. Обеспечение бесперебойной работы автокомплекса. Контроль выхода смен персонала автомойки, шиномонтажа, АЗС, технического персонала. Оперативное руководство автокомплексом. Контроль технического
-                                    состояния оборудования. Решение оперативных хозяйственных вопросов. Контроль за поддержанием чистоты и порядка на автокомплексе. Решение оперативных вопросов с клиентами. Обеспечение сохранности оборудования и вверенных
-                                    средств.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline__item ">
-                            <time class="timeline__date " datetime="11-12-2018 ">06.2016 <b>09.2018</b> </time>
-                            <h5 class="timeline__subtitle ">ООО Восток Дистрибьешн</h5>
-                            <div class="timeline__position ">Супервайзер торговых представителей</div>
-                            <div class="timeline__text ">
-                                <p>Развитие маршрута, отработка маршрута, переговоры на уровне первых лиц, выполнение планов 5 подчинённых
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item ">
-                            <time class="timeline__date " datetime="11-12-2018 ">03.2013 <b>02.2016</b> </time>
-                            <h5 class="timeline__subtitle ">ОАО СК альянс</h5>
-                            <div class="timeline__position ">Руководитель банковского страхования</div>
-                            <div class="timeline__text ">
-                                <p>Выполнение планов по страхованию, консультирование сотрудников банка, тренинги для сотрудников банков, расстановка задач для менеджеров компании. 2 подчинённых
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="timeline__col timeline__col--right ">
-                        <h4 class="timeline__title ">ОБРАЗОВАНИЕ</h4>
-
-                        <div class="timeline__item ">
-                            <time class="timeline__date " datetime="11-12-2018 ">2008- <b>2013</b> </time>
-                            <h5 class="timeline__subtitle ">Современная гуманитарная академия, Москва</h5>
-                            <div class="timeline__position ">Юридический факультет</div>
-
-                        </div>
-
-                        <div class="timeline__item ">
-                            <time class="timeline__date " datetime="11-12-2018 ">2022 <b>по настоящее время</b> </time>
-                            <h5 class="timeline__subtitle ">GeekBrains</h5>
-                            <div class="timeline__position ">Разработчик</div>
-
-                        </div>
-
-                        <h4 class="timeline__title ">Знания</h4>
-                        <div class="progress-bar ">
-                            <div class="timeline__text ">
-                                <p>Знаю такие языки программирования,как:Python, C#, Java, JavaScript.Языки разметки: HTML(5), таблицы стилей CSS(3). Умею верстать адаптивные сайты под планшеты и мобильные устройства, фраемворк Bootstrap. Также знаю библиотеку
-                                    jQuery!
-                                </p>
-                            </div>
-
-                            <h4 class="timeline__title ">Самообразование</h4>
-                            <div class="timeline__text ">
-                                <p> Курсы в интернете, видеокурсы, книги, документация, форумы, статьи.</p>
-                            </div>
-
-                        </div>
-                        <!-- /.progress-bar -->
-
-                    </div>
-                    <!-- /.timeline__col -->
-                </div>
-                <!-- /.timeline -->
-
-
-                <div class="text-center">
-                    <a class="btn" href="#" data-modal="#modal_hire_me">Найми меня</a>
-                </div>
-
-            </div>
-            <!-- /.modal__content -->
-
-
-
-
-        </div>
-        <!-- /.modal__dialog -->
-
+    <div class="skillgroups">
+      <div class="sgroup reveal"><h3>&gt; Языки программирования</h3><div class="list"><span>JavaScript</span><span>Python</span><span>C#</span><span>Java</span></div></div>
+      <div class="sgroup reveal"><h3>&gt; Вёрстка и стили</h3><div class="list"><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>Адаптив</span></div></div>
+      <div class="sgroup reveal"><h3>&gt; CMS</h3><div class="list"><span>WordPress</span><span>Натяжка макета</span><span>Сборка с нуля</span></div></div>
+      <div class="sgroup reveal"><h3>&gt; Инструменты</h3><div class="list"><span>Git</span><span>GitHub Pages</span><span>VS Code</span></div></div>
     </div>
-    <!-- /.modal -->
+  </div>
+</section>
 
-    <div class="modal" id="modal_hire_me">
-        <div class="modal__dialog modal__dialog--sm">
-
-            <button class="modal__close" type="button" data-close>
-            <img src="images/cl.png " height="35 " alt="Close ">
-        </button>
-
-            <div class="contact">
-                <div class="contact__left">
-                    <h3 class="modal__title mb-0">связь</h3>
-                    <h4 class="modal__subtitle">Позвони мне</h4>
-
-                    <ul class="contact__info ">
-                        <li class="contact__info-item "><img class="contact__info-icon " src="images/phone.svg " alt=" "> +7 924 289 1616</li>
-                        <li class="contact__info-item "><img class="contact__info-icon " src="images/mail.svg " alt=" "> baxyc.da@gmail.com
-                        </li>
-                    </ul>
-
-                    <form class="form " action="/ " method="post ">
-                        <div class="form__group ">
-                            <label class="form__label " for="input-email ">Adress e-mail</label>
-                            <input class="form__input " name="input-email " type="text " id="input-email " placeholder="e-mail ">
-                        </div>
-
-                        <div class="form__group ">
-                            <label class="form__label " for="input-text ">Текс</label>
-                            <textarea class="form__textarea " name="input-text " id="input-text " placeholder="Введите запрос "></textarea>
-                        </div>
-
-                        <div class="text__right ">
-                            <button class="btn " type="submit ">Временно не доступно</button>
-                        </div>
-
-                    </form>
-                </div>
-                <!-- /.contact__left -->
-            </div>
-            <!-- /.contact -->
-
-        </div>
-        <!-- /.modal__dialog -->
-
-
-
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <span class="tag">04 — Контакты</span>
+    <h2 class="big">Есть идея? <span class="grad-text">Давайте сделаем сайт.</span></h2>
+    <p>Открыт для новых проектов и сотрудничества. Напишите — обсудим задачу и сроки.</p>
+    <div class="row">
+      <a class="btn btn-g" href="https://t.me/baxyc" target="_blank" rel="noopener">Написать в Telegram</a>
+      <a class="btn btn-o" href="mailto:baxyc.da@gmail.com">baxyc.da@gmail.com</a>
+      <a class="btn btn-o" href="https://github.com/baxyc" target="_blank" rel="noopener">GitHub</a>
     </div>
-    <!-- /.modal -->
-    <!-- JS -->
-    <script src="/js/slick.min.js "></script>
-    <script src="/js/app.js "></script>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <span>© 2026 Иван Иванов · Frontend &amp; Web Developer</span>
+    <div class="socials">
+      <a href="https://github.com/baxyc" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://t.me/baxyc" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:baxyc.da@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+var els=[].slice.call(document.querySelectorAll('.reveal'));
+if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(el,i){el.style.transitionDelay=(Math.min(i%3,2)*80)+'ms';io.observe(el);});
+}else{els.forEach(function(el){el.classList.add('in');});}
+</script>
 </body>
-
 </html>
