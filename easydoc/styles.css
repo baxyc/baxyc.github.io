@@ -238,6 +238,22 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:34px;paddin
 .mobile-nav a:last-child{border-bottom:none}
 .mobile-nav a:hover{color:var(--gold-2)}
 
+/* responsive tables → cards on narrow screens (no horizontal cut) */
+@media(max-width:760px){
+  .tablewrap{overflow:visible;border:none;box-shadow:none;background:transparent;margin-top:22px}
+  .prog table{min-width:0;width:100%}
+  .prog thead{display:none}
+  .prog tbody,.prog tbody tr,.prog tbody td{display:block}
+  .prog tbody tr{background:#fff;border:1px solid #e6e0d2;border-radius:14px;padding:6px 16px 12px;margin-bottom:14px;box-shadow:0 8px 20px rgba(10,31,68,.06)}
+  .prog tbody tr:nth-child(even){background:#fff}
+  .prog tbody td{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;padding:9px 0;border-top:1px solid #f1ebdd}
+  .prog tbody td::before{content:attr(data-label);flex:0 0 92px;font-weight:700;color:var(--gold);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding-top:3px}
+  .prog tbody td.spec{border-top:none;padding-bottom:6px}
+  .prog tbody td.spec::before{flex-basis:100%;color:var(--muted)}
+  .prog tbody td.spec{font-size:18px;color:var(--navy)}
+  .prog tbody td:not(.spec){font-size:15px}
+}
+
 /* responsive */
 @media(max-width:1024px){
   .gallery .grid{grid-template-columns:repeat(3,1fr)}
