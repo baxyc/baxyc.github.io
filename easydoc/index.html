@@ -3,273 +3,277 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EasyDoc China — Поступление и образование в Китае | Образование без границ</title>
-<meta name="description" content="EasyDoc China — полное сопровождение поступления в вузы и колледжи Китая после 9 и 11 класса. Проверенные вузы-партнёры, программы СПО, бакалавриат, форматы 3+4 / 2+2 / 1+3.">
+<title>EasyDoc China — Поступление в Китай под ключ</title>
+<meta name="description" content="EasyDoc China — полное сопровождение поступления в колледжи и вузы Китая после 9 и 11 класса. Проверенные вузы-партнёры, понятные программы, фиксированная стоимость обучения.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230a1f44'/><text x='50%' y='58%' font-size='40' text-anchor='middle' fill='%23c9a24b' font-family='Georgia' font-weight='bold'>E</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230a1f44'/><text x='50%' y='58%' font-size='40' text-anchor='middle' fill='%23e6c877' font-family='Georgia' font-weight='bold'>E</text></svg>">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="top">
+<div class="scrollbar-anim" id="scrollbar"></div>
+
+<header class="nav">
   <div class="wrap row">
     <a class="brand" href="#top">
       <span class="mark">E</span>
       <span><b>EasyDoc China</b><small>Образование без границ</small></span>
     </a>
     <nav class="menu">
-      <a href="#about">О нас</a>
-      <a href="#programs">Программы</a>
-      <a href="#formats">Форматы</a>
-      <a href="#timeline">Как поступить</a>
+      <a href="#benefits">Преимущества</a>
+      <a href="#steps">Как поступить</a>
+      <a href="#plans">Программы</a>
       <a href="#gallery">Галерея</a>
+      <a href="#faq">Вопросы</a>
     </nav>
-    <a class="btn sm" href="#contacts">Консультация</a>
-    <button class="hamburger" id="hamburger" aria-label="Открыть меню" aria-expanded="false" onclick="toggleNav()">☰</button>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#contacts">Консультация</a>
+      <button class="burger" id="burger" aria-label="Меню" onclick="toggleNav()">☰</button>
+    </div>
   </div>
 </header>
-<div class="mobile-nav" id="mobileNav">
-  <a href="#about" onclick="toggleNav()">О нас</a>
-  <a href="#programs" onclick="toggleNav()">Программы</a>
-  <a href="#formats" onclick="toggleNav()">Форматы</a>
-  <a href="#timeline" onclick="toggleNav()">Как поступить</a>
+<div class="mnav" id="mnav">
+  <a href="#benefits" onclick="toggleNav()">Преимущества</a>
+  <a href="#steps" onclick="toggleNav()">Как поступить</a>
+  <a href="#plans" onclick="toggleNav()">Программы</a>
   <a href="#gallery" onclick="toggleNav()">Галерея</a>
+  <a href="#faq" onclick="toggleNav()">Вопросы</a>
   <a href="#contacts" onclick="toggleNav()">Консультация</a>
 </div>
 
 <section class="hero" id="top">
   <div class="wrap grid">
     <div>
-      <div class="eyebrow">China · Russia · Future Together</div>
-      <h1>Поступление в Китай <span class="g">без границ</span> и без суеты</h1>
-      <p class="sub">Полное сопровождение от первого документа до зачисления. Колледжи и вузы Китая после 9 и 11 класса — с проверенными партнёрами и понятным планом.</p>
+      <span class="eyebrow">China · Russia · Future Together</span>
+      <h1>Поступление в Китай — <span class="hl">под ключ</span>, без суеты</h1>
+      <p class="lead">Колледжи и вузы Китая после 9 и 11 класса. Проведём тебя от первого документа до зачисления — с проверенными партнёрами и понятным планом.</p>
       <div class="cta">
-        <a class="btn" href="tel:+79248830090">📞 +7 924 883-00-90</a>
-        <a class="btn ghost" href="#programs">Смотреть программы</a>
+        <a class="btn btn-gold btn-lg" href="#contacts">Начать подготовку</a>
+        <a class="btn btn-ghost btn-lg" href="#plans">Смотреть программы</a>
       </div>
-      <div class="badges">
-        <span class="chip">Опыт и надёжность</span>
-        <span class="chip">Проверенные вузы-партнёры</span>
-        <span class="chip">Сопровождение на всех этапах</span>
+      <div class="trust">
+        <div class="t"><span class="ic">✓</span> Проверенные вузы-партнёры</div>
+        <div class="t"><span class="ic">✓</span> Сопровождение на всех этапах</div>
+        <div class="t"><span class="ic">✓</span> Для брони — только загранпаспорт</div>
       </div>
     </div>
     <div class="hero-art">
-      <div class="frame"><img src="assets/post-recruit-2027.webp" alt="Набор 2027 — обучение в Китае EasyDoc China"></div>
-      <div class="tag"><span>Набор</span>2027 · места открыты</div>
+      <div class="shot"><img src="assets/post-recruit-2027.webp" alt="EasyDoc China — обучение в Китае"></div>
+      <div class="float"><span class="dot">¥</span><span><b><span class="count" data-to="19800">19 800</span> ¥ / год</b><span>фиксированная стоимость обучения</span></span></div>
     </div>
   </div>
 </section>
 
-<section class="stats">
-  <div class="wrap row">
-    <div class="stat"><b>3 года</b><span>среднее профессиональное образование</span></div>
-    <div class="stat"><b>4 года</b><span>программы бакалавриата</span></div>
-    <div class="stat"><b>19 800 ¥</b><span>в год за обучение</span></div>
-    <div class="stat"><b>9→11 кл.</b><span>приём после класса</span></div>
-  </div>
-</section>
-
-<section class="section" id="about">
+<section class="partners">
   <div class="wrap">
-    <div class="eyebrow">Почему EasyDoc China</div>
-    <h2>Ваш надёжный партнёр в Китае</h2>
-    <p class="lead">Мы проводим вас через поступление от первого документа до зачисления — чтобы вы не теряли время и не совершали ошибок в дедлайнах.</p>
-    <div class="feat-grid">
-      <div class="card">
-        <div class="ico">🎓</div>
-        <h3>Полное сопровождение</h3>
-        <p>Документы, заявки, бронь места, подготовка к переезду и началу обучения — берём на себя весь процесс.</p>
-      </div>
-      <div class="card">
-        <div class="ico">🏛️</div>
-        <h3>Проверенные вузы-партнёры</h3>
-        <p>Хэйлунцзянский университет, Харбинский инженерный университет и Саньцзянский художественный институт.</p>
-      </div>
-      <div class="card">
-        <div class="ico">🧭</div>
-        <h3>Понятный план</h3>
-        <p>Гибкие форматы 3+4, 2+2, 1+3 и непрерывная система «специалист — бакалавр — магистр — докторант».</p>
+    <div class="lbl">Учимся вместе с ведущими вузами Хэйлунцзяна</div>
+    <div class="marquee">
+      <div class="mtrack">
+        <span class="pchip">Хэйлунцзянский университет</span>
+        <span class="pchip">Харбинский инженерный университет</span>
+        <span class="pchip">Саньцзянский художественный институт</span>
+        <span class="pchip">Китайско-Российский совместный институт</span>
+        <span class="pchip">Хэйлунцзянский университет</span>
+        <span class="pchip">Харбинский инженерный университет</span>
+        <span class="pchip">Саньцзянский художественный институт</span>
+        <span class="pchip">Китайско-Российский совместный институт</span>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="split" style="margin-top:64px">
-      <div class="img"><img src="assets/photo-rector-meeting.webp" alt="Встреча EasyDoc China с администрацией вуза в Харбине"></div>
-      <div>
-        <div class="eyebrow">О вузе-партнёре</div>
-        <h2 style="font-size:clamp(24px,3vw,34px)">Хэйлунцзянский Саньцзянский художественный профессиональный институт</h2>
-        <p style="color:var(--muted)">Утверждён правительством провинции Хэйлунцзян, зарегистрирован в Министерстве образования Китая. В структуре — институты ИИ, дроновой индустрии, дизайна и технологий, цифровая анимационная фабрика, Китайско-Российский совместный институт образования и база практики в Пекине. Ведётся приём иностранных студентов.</p>
-        <ul class="checks">
-          <li>Совместный институт с Хэйлунцзянским университетом и Харбинским инженерным университетом</li>
-          <li>Современный цифровой кампус в Харбине</li>
-          <li>Прямые контакты с администрацией — без посредников «в никуда»</li>
+<section class="section benefits" id="benefits">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Почему EasyDoc</span>
+      <h2>Всё, что нужно для поступления, — в одном месте</h2>
+      <p>Берём на себя документы, выбор вуза и подготовку, чтобы ты сосредоточился на учёбе.</p>
+    </div>
+    <div class="grid">
+      <div class="bcard"><div class="ic">🎓</div><h3>Полное сопровождение</h3><p>Документы, заявки, бронь места, подготовка к переезду и зачисление — ведём за руку.</p></div>
+      <div class="bcard"><div class="ic">🏛️</div><h3>Проверенные вузы</h3><p>Работаем напрямую с администрацией вузов-партнёров в Харбине. Без посредников «в никуда».</p></div>
+      <div class="bcard"><div class="ic">🧭</div><h3>Понятный план</h3><p>Гибкие форматы 3+4, 2+2, 1+3 и непрерывная система от колледжа до докторантуры.</p></div>
+      <div class="bcard"><div class="ic">🛂</div><h3>Простой старт</h3><p>Чтобы забронировать место, достаточно прислать только загранпаспорт.</p></div>
+      <div class="bcard"><div class="ic">💬</div><h3>Китайский с нуля</h3><p>Языковые курсы с первого семестра и бесплатный пробный урок HSK для знакомства.</p></div>
+      <div class="bcard"><div class="ic">💡</div><h3>Прозрачная цена</h3><p>Фиксированная стоимость обучения 19 800 ¥ в год по всем направлениям.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section steps" id="steps">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Как поступить</span>
+      <h2>Начинать нужно не в последний момент</h2>
+      <p>Если планируешь поступление на следующий учебный год — собирать документы лучше уже сейчас.</p>
+    </div>
+    <div class="grid">
+      <div class="step"><div class="when">Сентябрь — Декабрь</div><h3>Собираем документы</h3><p>Готовим документы, определяемся с направлением и вузом.</p></div>
+      <div class="step"><div class="when">Январь — Февраль</div><h3>Подаём заявки</h3><p>Отправляем документы и заявки на поступление.</p></div>
+      <div class="step"><div class="when">Весна</div><h3>Ждём результат</h3><p>Получаем ответ вуза и оформляем необходимые документы.</p></div>
+      <div class="step"><div class="when">Лето</div><h3>Готовимся к переезду</h3><p>Бронь места по загранпаспорту и подготовка к началу обучения.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section plans" id="plans">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Программы</span>
+      <h2>Выбери свой путь в Китае</h2>
+      <p>Стоимость обучения 19 800 ¥ в год по всем направлениям. Подберём и другие специальности — напиши нам.</p>
+    </div>
+    <div class="grid">
+      <div class="plan">
+        <div class="pt">После 9 класса</div>
+        <h3>Среднее профессиональное</h3>
+        <div class="price"><span class="count" data-to="19800">19 800</span> ¥ <small>/ год · 3 года</small></div>
+        <ul>
+          <li>Дизайн и технологии</li>
+          <li>Киноанимация и медиа-арт</li>
+          <li>Строительство и инженерия</li>
+          <li>Искусственный интеллект и VR</li>
+          <li>Дроновая индустрия</li>
+          <li>Художественное лечение</li>
         </ul>
+        <a class="btn btn-ghost" href="#contacts">Выбрать направление</a>
+      </div>
+      <div class="plan feat">
+        <span class="badge">Популярный</span>
+        <div class="pt">После 11 класса</div>
+        <h3>Бакалавриат</h3>
+        <div class="price"><span class="count" data-to="19800">19 800</span> ¥ <small>/ год · 4 года</small></div>
+        <ul>
+          <li>Дизайн, живопись, ИИ, программирование</li>
+          <li>Журналистика, реклама, экономика</li>
+          <li>Психология, педагогика, туризм</li>
+          <li>Формат 2+2 или 1+3 с вузом-партнёром</li>
+          <li>Диплом бакалавра дневного обучения</li>
+          <li>Продолжение: магистратура и докторантура</li>
+        </ul>
+        <a class="btn btn-gold" href="#contacts">Поступить на бакалавриат</a>
+      </div>
+      <div class="plan">
+        <div class="pt">Первый шаг</div>
+        <h3>Пробный курс HSK</h3>
+        <div class="price">Бесплатно <small>· онлайн</small></div>
+        <ul>
+          <li>Основы пиньиня и произношения</li>
+          <li>Названия вузов и специальностей</li>
+          <li>Формат VooV Meeting</li>
+          <li>Знакомство с EasyDoc China</li>
+          <li>Консультация по поступлению</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contacts">Записаться на урок</a>
       </div>
     </div>
-  </div>
-</section>
-<section class="section prog" id="programs">
-  <div class="wrap">
-    <div class="eyebrow">Программы</div>
-    <h2>Что можно изучать в Китае</h2>
-    <p class="lead">Популярные направления. Нужна другая специальность — напишите в офис обслуживания иностранных студентов, подберём.</p>
-
-    <h3 style="color:var(--navy);margin:46px 0 4px;font-size:22px">Среднее профессиональное образование · после 9 класса</h3>
-    <p class="note">Обучение 3 года, <b>19 800 юаней/год</b>. Первый семестр — язык утром и база + музыка/физкультура после обеда; со второго семестра — профильные предметы; третий год — практика под руководством наставников.</p>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>Направление</th><th>Специальности</th><th>Срок</th><th>Плата</th></tr></thead>
-        <tbody>
-          <tr><td class="spec" data-label="Направление">Дизайн и технологии</td><td data-label="Специальности">Художественный дизайн · Дизайн визуальной коммуникации · Промышленный дизайн · Технология и дизайн одежды · Медиа-реклама и маркетинг</td><td data-label="Срок">3 года</td><td data-label="Плата"><span class="pill">19 800 ¥/год</span></td></tr>
-          <tr><td class="spec" data-label="Направление">Киноанимация</td><td data-label="Специальности">Киноанимация · Дизайн игр · Цифровые медиа-арты · Анимация и комиксы</td><td data-label="Срок">3 года</td><td data-label="Плата"><span class="pill">19 800 ¥/год</span></td></tr>
-          <tr><td class="spec" data-label="Направление">Строительство и инженерия</td><td data-label="Специальности">Архитектурно-декоративное дело · Интерьерный дизайн · Ландшафтный дизайн · Искусственный интеллект</td><td data-label="Срок">3 года</td><td data-label="Плата"><span class="pill">19 800 ¥/год</span></td></tr>
-          <tr><td class="spec" data-label="Направление">Индустрия ИИ</td><td data-label="Специальности">Технологии виртуальной реальности · Цифровые медиа · Программные технологии</td><td data-label="Срок">3 года</td><td data-label="Плата"><span class="pill">19 800 ¥/год</span></td></tr>
-          <tr><td class="spec" data-label="Направление">Искусство лечения и здравоохранение</td><td data-label="Специальности">Художественное образование · Преподавание в школах · Каллиграфия и живопись · Культурно-творческий дизайн</td><td data-label="Срок">3 года</td><td data-label="Плата"><span class="pill">19 800 ¥/год</span></td></tr>
-          <tr><td class="spec" data-label="Направление">Дроновая индустрия</td><td data-label="Специальности">Картография с помощью дронов · Прикладные технологии дронов</td><td data-label="Срок">3 года</td><td data-label="Плата"><span class="pill">19 800 ¥/год</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 style="color:var(--navy);margin:46px 0 4px;font-size:22px">Бакалавриат · после 11 класса</h3>
-    <p class="note">Срок 4 года, диплом бакалавра, <b>19 800 юаней/год</b>. Формат <b>2+2</b> — первые 2 года в институте Саньцзян, далее в вузе-партнёре; <b>1+3</b> — 1 год в институте, далее 3 года в вузе-партнёре.</p>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>Форма</th><th>Специальности</th><th>Срок</th><th>Плата</th></tr></thead>
-        <tbody>
-          <tr><td class="spec" data-label="Форма">2+2</td><td data-label="Специальности">Дизайн одежды · Визуальные коммуникации · Ландшафтный дизайн · Живопись · Декоративно-прикладное искусство · Китайский язык и литература · Инженерия ПО</td><td data-label="Срок">4 года</td><td data-label="Плата"><span class="pill">19 800 ¥/год</span></td></tr>
-          <tr><td class="spec" data-label="Форма">1+3</td><td data-label="Специальности">Журналистика · Реклама · Коммуникативистика · Режиссура ТВ/радио · Музыкальное исполнительство · Экономика · Финансы · Менеджмент · Бухгалтерский учёт · Психология · Туризм и гостеприимство · Компьютерные науки · Электронная коммерция · Международная торговля · Биофармацевтика · Пищевые технологии · Социология · Политология · Государственное управление · Философия · Археология · Преподавание китайского</td><td data-label="Срок">4 года</td><td data-label="Плата"><span class="pill">19 800 ¥/год</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">★ Выпускники могут продолжить обучение по непрерывной системе <b>«бакалавриат → магистратура → докторантура»</b>. При успешном изучении языка возможен приём сразу на первый курс, минуя годичный подготовительный.</p>
   </div>
 </section>
 
 <section class="section formats" id="formats">
   <div class="wrap">
-    <div class="eyebrow">Форматы обучения</div>
-    <h2>Инновационные модели: путь к диплому в формате «одного окна»</h2>
-    <p class="lead">Гибкие сроки, экономия времени и непрерывный рост от колледжа до докторантуры.</p>
-    <div class="fmt-grid">
-      <div class="fmt">
-        <div class="big">3+4</div>
-        <div class="bar"></div>
-        <h3>После 9 класса</h3>
-        <p>3 года среднего профессионального образования, затем переход на бакалавриат по моделям 1+3 или 2+2.</p>
-      </div>
-      <div class="fmt">
-        <div class="big">2+2</div>
-        <div class="bar"></div>
-        <h3>Два года + два года</h3>
-        <p>2 года в институте Саньцзян + 2 года в Хэйлунцзянском или Харбинском инженерном университете. Гарантированный дневной диплом партнёра.</p>
-      </div>
-      <div class="fmt">
-        <div class="big">1+3</div>
-        <div class="bar"></div>
-        <h3>Быстрый вход в вуз</h3>
-        <p>1 год в институте + 3 года в университете-партнёре. Раньше получаете доступ к университетским ресурсам и быстрее растёте академически.</p>
-      </div>
+    <div class="section-head">
+      <span class="eyebrow">Форматы обучения</span>
+      <h2>Диплом в формате «одного окна»</h2>
+      <p>Гибкие сроки, экономия времени и непрерывный рост от колледжа до докторантуры.</p>
     </div>
-  </div>
-</section>
-
-<section class="section" id="timeline">
-  <div class="wrap">
-    <div class="eyebrow">Как поступить</div>
-    <h2>Начинать нужно не в последний момент</h2>
-    <p class="lead">Если планируете поступление на следующий учебный год — собирать документы лучше уже с начала текущего. Чем раньше старт, тем спокойнее процесс.</p>
-    <div class="tl">
-      <div class="step">
-        <div class="when">Сентябрь — Декабрь</div>
-        <h3>Собираем документы</h3>
-        <p>Готовим документы, определяемся с направлением и вузом. Для брони места нужен только загранпаспорт.</p>
-      </div>
-      <div class="step">
-        <div class="when">Январь — Февраль</div>
-        <h3>Подаём заявки</h3>
-        <p>Отправляем документы и заявки на поступление в выбранные программы.</p>
-      </div>
-      <div class="step">
-        <div class="when">Дальше</div>
-        <h3>Ждём и готовимся</h3>
-        <p>Получаем результаты, оформляем документы, готовимся к переезду и началу обучения.</p>
-      </div>
+    <div class="grid">
+      <div class="fmt"><div class="big">3+4</div><h3>После 9 класса</h3><p>3 года среднего профессионального образования, затем бакалавриат по моделям 1+3 или 2+2.</p></div>
+      <div class="fmt"><div class="big">2+2</div><h3>Два года + два</h3><p>2 года в институте Саньцзян + 2 года в Хэйлунцзянском или Харбинском инженерном университете.</p></div>
+      <div class="fmt"><div class="big">1+3</div><h3>Быстрый вход в вуз</h3><p>1 год в институте + 3 года в университете-партнёре. Раньше получаешь доступ к ресурсам вуза.</p></div>
     </div>
-  </div>
-</section>
-<section class="cta-band">
-  <div class="wrap">
-    <div class="eyebrow" style="color:#ffd27a">Набор 2027 · бесплатно</div>
-    <h2>Пробный курс HSK по китайскому языку</h2>
-    <p>Основы пиньиня и произношения, разбор названий вузов и специальностей, онлайн-формат. <b class="gold-on-red">Сделайте первый шаг к обучению в Китае</b> — напишите нам, чтобы попасть на занятие и получить консультацию.</p>
-    <a class="btn" href="#contacts">Записаться на пробный урок</a>
   </div>
 </section>
 
 <section class="section gallery" id="gallery">
   <div class="wrap">
-    <div class="eyebrow">Из нашего Telegram</div>
-    <h2>Живые истории и подробности</h2>
-    <p class="lead">Первые занятия в китайском колледже, встречи с администрацией вузов, анонсы набора и программ — всё, что мы публикуем в канале.</p>
-    <div class="grid" id="galleryGrid">
-      <a class="gcard" href="assets/post-institute.webp" data-full="assets/post-institute.webp" data-cap="Совместный институт образования"><img src="assets/post-institute.webp" alt="Китайско-Российский совместный институт" loading="lazy"><div class="cap">Совместный институт образования</div></a>
-      <a class="gcard" href="assets/post-spo-9class.webp" data-full="assets/post-spo-9class.webp" data-cap="Направления · после 9 класса"><img src="assets/post-spo-9class.webp" alt="Направления после 9 класса" loading="lazy"><div class="cap">Направления · после 9 класса</div></a>
-      <a class="gcard" href="assets/post-bachelor-11.webp" data-full="assets/post-bachelor-11.webp" data-cap="Бакалавриат · после 11 класса"><img src="assets/post-bachelor-11.webp" alt="Бакалавриат после 11 класса" loading="lazy"><div class="cap">Бакалавриат · после 11 класса</div></a>
-      <a class="gcard" href="assets/post-formats.webp" data-full="assets/post-formats.webp" data-cap="Форматы 3+4 · 2+2 · 1+3"><img src="assets/post-formats.webp" alt="Форматы 3+4, 2+2, 1+3" loading="lazy"><div class="cap">Форматы 3+4 · 2+2 · 1+3</div></a>
-      <a class="gcard" href="assets/post-timeline.webp" data-full="assets/post-timeline.webp" data-cap="Когда начинать подготовку"><img src="assets/post-timeline.webp" alt="Таймлайн поступления" loading="lazy"><div class="cap">Когда начинать подготовку</div></a>
-      <a class="gcard" href="assets/post-partners.webp" data-full="assets/post-partners.webp" data-cap="Вузы-партнёры и соглашения"><img src="assets/post-partners.webp" alt="Вузы-партнёры" loading="lazy"><div class="cap">Вузы-партнёры и соглашения</div></a>
-      <a class="gcard" href="assets/post-college-about.webp" data-full="assets/post-college-about.webp" data-cap="Об институте Саньцзян"><img src="assets/post-college-about.webp" alt="Об институте Саньцзян" loading="lazy"><div class="cap">Об институте Саньцзян</div></a>
-      <a class="gcard" href="assets/post-hsk-free.webp" data-full="assets/post-hsk-free.webp" data-cap="Бесплатный пробный HSK"><img src="assets/post-hsk-free.webp" alt="Бесплатный пробный HSK" loading="lazy"><div class="cap">Бесплатный пробный HSK</div></a>
-      <a class="gcard land" href="assets/photo-first-lessons.webp" data-full="assets/photo-first-lessons.webp" data-cap="Первые занятия в колледже"><img src="assets/photo-first-lessons.webp" alt="Первые занятия в колледже" loading="lazy"><div class="cap">Первые занятия в колледже</div></a>
-      <a class="gcard land" href="assets/photo-rector-meeting.webp" data-full="assets/photo-rector-meeting.webp" data-cap="Встреча с администрацией вуза"><img src="assets/photo-rector-meeting.webp" alt="Встреча с ректором" loading="lazy"><div class="cap">Встреча с администрацией вуза</div></a>
-      <a class="gcard" href="assets/post-recruit-2027.webp" data-full="assets/post-recruit-2027.webp" data-cap="Набор 2027"><img src="assets/post-recruit-2027.webp" alt="Набор 2027" loading="lazy"><div class="cap">Набор 2027</div></a>
+    <div class="section-head">
+      <span class="eyebrow">Из нашего Telegram</span>
+      <h2>Живые истории и подробности</h2>
+      <p>Нажмите на картинку, чтобы открыть просмотр и листать стрелками или свайпом.</p>
+    </div>
+    <div class="g-grid" id="galleryGrid">
+      <a class="gcard" href="assets/post-institute.webp" data-full="assets/post-institute.webp" data-cap="Совместный институт образования"><img src="assets/post-institute.webp" alt="Совместный институт" loading="lazy"><div class="cap">Совместный институт</div></a>
+      <a class="gcard" href="assets/post-spo-9class.webp" data-full="assets/post-spo-9class.webp" data-cap="Направления · после 9 класса"><img src="assets/post-spo-9class.webp" alt="Направления после 9 класса" loading="lazy"><div class="cap">Направления · 9 класс</div></a>
+      <a class="gcard" href="assets/post-bachelor-11.webp" data-full="assets/post-bachelor-11.webp" data-cap="Бакалавриат · после 11 класса"><img src="assets/post-bachelor-11.webp" alt="Бакалавриат после 11 класса" loading="lazy"><div class="cap">Бакалавриат · 11 класс</div></a>
+      <a class="gcard" href="assets/post-formats.webp" data-full="assets/post-formats.webp" data-cap="Форматы 3+4 · 2+2 · 1+3"><img src="assets/post-formats.webp" alt="Форматы обучения" loading="lazy"><div class="cap">Форматы 3+4 · 2+2 · 1+3</div></a>
+      <a class="gcard" href="assets/post-timeline.webp" data-full="assets/post-timeline.webp" data-cap="Когда начинать подготовку"><img src="assets/post-timeline.webp" alt="Таймлайн поступления" loading="lazy"><div class="cap">Когда начинать</div></a>
+      <a class="gcard" href="assets/post-partners.webp" data-full="assets/post-partners.webp" data-cap="Вузы-партнёры и соглашения"><img src="assets/post-partners.webp" alt="Вузы-партнёры" loading="lazy"><div class="cap">Вузы-партнёры</div></a>
+      <a class="gcard land" href="assets/photo-first-lessons.webp" data-full="assets/photo-first-lessons.webp" data-cap="Первые занятия в колледже"><img src="assets/photo-first-lessons.webp" alt="Первые занятия" loading="lazy"><div class="cap">Первые занятия</div></a>
+      <a class="gcard land" href="assets/photo-rector-meeting.webp" data-full="assets/photo-rector-meeting.webp" data-cap="Встреча с администрацией вуза"><img src="assets/photo-rector-meeting.webp" alt="Встреча с ректором" loading="lazy"><div class="cap">Встреча с администрацией</div></a>
     </div>
   </div>
 </section>
 
-<section class="section contacts" id="contacts" style="background:linear-gradient(180deg,#fbf9f3,#fff)">
+<section class="section quotes">
   <div class="wrap">
-    <div class="eyebrow">Контакты</div>
-    <h2>Начните подготовку уже сейчас</h2>
-    <p class="lead">Напишите нам, чтобы получить консультацию и забронировать место. Мы ответим и поможем составить план поступления.</p>
+    <div class="section-head">
+      <span class="eyebrow">Атмосфера</span>
+      <h2>Китай ближе, чем ты думаешь</h2>
+    </div>
+    <div class="grid">
+      <div class="quote"><div class="q">«Китай <span class="hl">ближе</span>, чем ты думаешь»</div><div class="who">Новые знания · новые люди · большие возможности</div></div>
+      <div class="quote"><div class="q">«Больше <span class="hl">возможностей</span> для вашего будущего»</div><div class="who">От колледжа до докторантуры</div></div>
+      <div class="quote"><div class="q">«Вместе к <span class="hl">большим целям</span>»</div><div class="who">Наша задача — провести тебя до зачисления</div></div>
+    </div>
+  </div>
+</section>
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Вопросы</span>
+      <h2>Частые вопросы о поступлении</h2>
+    </div>
+    <div class="list">
+      <details open><summary>Когда начинать подготовку к поступлению?</summary><p>Собирать документы лучше с начала учебного года: сентябрь–декабрь готовим документы и выбираем вуз, январь–февраль подаём заявки, дальше ждём результат и готовимся к переезду. Чем раньше старт — тем спокойнее процесс.</p></details>
+      <details><summary>Что нужно, чтобы забронировать место?</summary><p>Достаточно прислать только загранпаспорт. Остальное оформление документов берём на себя.</p></details>
+      <details><summary>После какого класса можно поступать?</summary><p>После 9 класса доступны программы среднего профессионального образования (3 года). После 11 класса — бакалавриат (4 года) по форматам 2+2 или 1+3.</p></details>
+      <details><summary>Сколько стоит обучение?</summary><p>Фиксированная стоимость — 19 800 юаней в год по всем направлениям. При успешном изучении языка возможен приём сразу на первый курс, минуя годичный подготовительный.</p></details>
+      <details><summary>Можно ли продолжить до магистратуры и докторантуры?</summary><p>Да. Действует непрерывная система «специалист — бакалавр — магистр — докторантурa», вне зависимости от уровня при поступлении.</p></details>
+      <details><summary>Есть ли бесплатный пробный урок?</summary><p>Да — бесплатный пробный курс HSK по китайскому языку онлайн (VooV Meeting): основы произношения, названия вузов и специальностей, консультация по поступлению.</p></details>
+      <details><summary>Какие вузы-партнёры?</summary><p>Хэйлунцзянский университет, Харбинский инженерный университет и Хэйлунцзянский Саньцзянский художественный профессиональный институт (Китайско-Российский совместный институт образования).</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#ffe9b8">Набор 2027</span>
+    <h2>Сделай первый шаг к обучению в Китае</h2>
+    <p>Напиши нам, чтобы получить консультацию и начать подготовку к поступлению.</p>
+    <a class="btn btn-gold btn-lg" href="#contacts">Получить консультацию</a>
+    <div class="meta">📞 +7 924 883-00-90 · ✉️ EasyDocChina@yandex.ru</div>
+  </div>
+</section>
+
+<section class="section contacts" id="contacts">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Контакты</span>
+      <h2>Начните подготовку уже сейчас</h2>
+      <p>Оставь заявку — свяжемся, ответим на вопросы и поможем составить план поступления.</p>
+    </div>
     <div class="grid">
       <div class="cinfo">
-        <a class="citem" href="tel:+79248830090">
-          <div class="ci">📞</div>
-          <div><b>+7 924 883-00-90</b><span>Телефон и WhatsApp — звонок быстрее всего</span></div>
-        </a>
-        <a class="citem" href="mailto:EasyDocChina@yandex.ru">
-          <div class="ci">✉️</div>
-          <div><b>EasyDocChina@yandex.ru</b><span>Почта для документов и вопросов</span></div>
-        </a>
-        <div class="citem">
-          <div class="ci">📍</div>
-          <div><b>Сахалин · Китай · Будущее</b><span>Поступление в колледжи и вузы Китая после 9 и 11 класса</span></div>
-        </div>
-        <div class="citem">
-          <div class="ci">🛂</div>
-          <div><b>Для брони места — только загранпаспорт</b><span>Остальное оформление берём на себя</span></div>
-        </div>
+        <a class="citem" href="tel:+79248830090"><div class="ci">📞</div><div><b>+7 924 883-00-90</b><span>Телефон и WhatsApp — звонок быстрее всего</span></div></a>
+        <a class="citem" href="mailto:EasyDocChina@yandex.ru"><div class="ci">✉️</div><div><b>EasyDocChina@yandex.ru</b><span>Почта для документов и вопросов</span></div></a>
+        <div class="citem"><div class="ci">📍</div><div><b>Сахалин · Китай · Будущее</b><span>Поступление в колледжи и вузы Китая после 9 и 11 класса</span></div></div>
+        <div class="citem"><div class="ci">🛂</div><div><b>Для брони места — только загранпаспорт</b><span>Остальное оформление берём на себя</span></div></div>
       </div>
       <form onsubmit="return sendLead(this)">
-        <h3 style="margin:0;color:var(--navy);font-size:20px">Оставить заявку</h3>
+        <h3>Оставить заявку</h3>
         <label for="nm">Имя</label>
         <input id="nm" name="name" type="text" placeholder="Как к вам обращаться" required>
         <label for="ph">Телефон или Telegram</label>
-        <input id="ph" name="contact" type="text" placeholder="+7 ... / @ник" required>
+        <input id="ph" name="contact" type="text" placeholder="+7 … / @ник" required>
         <label for="cls">После какого класса</label>
-        <select id="cls" name="grade">
-          <option>9 класс</option>
-          <option>11 класс</option>
-          <option>Уже учусь — хочу перевестись</option>
-          <option>Пока не решил(а)</option>
-        </select>
+        <select id="cls" name="grade"><option>9 класс</option><option>11 класс</option><option>Уже учусь — хочу перевестись</option><option>Пока не решил(а)</option></select>
         <label for="ms">Комментарий</label>
         <textarea id="ms" name="message" rows="3" placeholder="Интересующее направление, вопросы"></textarea>
-        <button class="btn" type="submit" style="margin-top:18px;width:100%;justify-content:center">Отправить заявку</button>
+        <button class="btn btn-primary" type="submit" style="margin-top:18px;width:100%;justify-content:center">Отправить заявку</button>
         <div class="ok" id="ok">Спасибо! Заявка принята. Мы свяжемся с вами в ближайшее время.</div>
-        <p class="note" style="margin-top:12px;font-size:12px">Форма демонстрационная: чтобы заявки приходили вам, подключим отправку на почту или в Telegram на этапе публикации.</p>
+        <p class="hint">Форма демонстрационная: чтобы заявки приходили тебе, подключим отправку на почту или в Telegram.</p>
       </form>
     </div>
   </div>
@@ -278,17 +282,17 @@
 <footer>
   <div class="wrap grid">
     <div>
-      <div class="fb"><span class="mark" style="width:34px;height:34px;border-radius:50%;background:linear-gradient(180deg,var(--gold-2),var(--gold));display:grid;place-items:center;color:var(--navy);font-weight:900;font-family:Georgia,serif">E</span><b style="font-family:'Playfair Display',Georgia,serif;font-size:18px">EasyDoc China</b></div>
-      <p style="font-size:14px;margin:0">Образование без границ. Ваш путь к образованию в Китае — от первого документа до зачисления. Explore · Practice · Innovate.</p>
-      <p class="small">China · Russia · Future Together</p>
+      <div class="fb"><span class="mark" style="width:38px;height:38px;border-radius:11px;background:linear-gradient(150deg,var(--navy),var(--navy-3));color:#e6c877;display:grid;place-items:center;font-weight:900;font-family:Georgia,serif;font-size:18px">E</span><b style="color:#fff;font-size:18px">EasyDoc China</b></div>
+      <p style="font-size:14px;margin:0">Образование без границ. Ваш путь к образованию в Китае — от первого документа до зачисления.</p>
+      <p style="font-size:12px;color:#9aa4b6;margin-top:8px">China · Russia · Future Together · Explore · Practice · Innovate</p>
     </div>
     <div>
       <h4>Разделы</h4>
-      <a href="#about">О нас и вузе</a>
-      <a href="#programs">Программы</a>
-      <a href="#formats">Форматы обучения</a>
-      <a href="#timeline">Как поступить</a>
+      <a href="#benefits">Преимущества</a>
+      <a href="#steps">Как поступить</a>
+      <a href="#plans">Программы</a>
       <a href="#gallery">Галерея</a>
+      <a href="#faq">Вопросы</a>
     </div>
     <div>
       <h4>Связаться</h4>
@@ -324,17 +328,11 @@ function sendLead(f){
   setTimeout(function(){f.reset();},400);
   return false;
 }
-
-/* мобильное меню */
 function toggleNav(){
-  var n=document.getElementById('mobileNav');
-  var h=document.getElementById('hamburger');
+  var n=document.getElementById('mnav'), h=document.getElementById('burger');
   var open=n.classList.toggle('open');
-  h.setAttribute('aria-expanded',open?'true':'false');
   h.textContent=open?'✕':'☰';
 }
-
-/* лайтбокс-слайдер */
 (function(){
   var grid=document.getElementById('galleryGrid');
   if(!grid) return;
@@ -373,6 +371,54 @@ function toggleNav(){
   lb.addEventListener('touchstart',function(e){ x0=e.changedTouches[0].clientX; },{passive:true});
   lb.addEventListener('touchend',function(e){ if(x0==null) return; var dx=e.changedTouches[0].clientX-x0;
     if(Math.abs(dx)>40){ show(dx<0?i+1:i-1); } x0=null; },{passive:true});
+})();
+
+/* оживление: появление, счётчик, параллакс, индикатор прокрутки */
+(function(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sel = '.section-head, .bcard, .plan, .fmt, .step, .quote, .gcard, .faq details, .citem, form';
+  var els = [].slice.call(document.querySelectorAll(sel));
+  els.forEach(function(el){ el.classList.add('reveal'); });
+
+  if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el,i){ el.style.transitionDelay = (Math.min(i%4,3)*70)+'ms'; io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* count-up у цены */
+  function fmt(n){ return n.toLocaleString('ru-RU'); }
+  var counts = [].slice.call(document.querySelectorAll('.count'));
+  function runCount(el){
+    var to = +el.getAttribute('data-to'), dur = 1300, t0 = performance.now();
+    function tick(now){ var p = Math.min(1,(now-t0)/dur), e = 1-Math.pow(1-p,3);
+      el.textContent = fmt(Math.round(to*e)); if(p<1) requestAnimationFrame(tick); }
+    requestAnimationFrame(tick);
+  }
+  if('IntersectionObserver' in window && !reduce){
+    var cio = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ runCount(en.target); cio.unobserve(en.target); } }); }, {threshold:.6});
+    counts.forEach(function(el){ cio.observe(el); });
+  }
+
+  /* индикатор прокрутки */
+  var sb = document.getElementById('scrollbar');
+  if(sb){
+    function onScroll(){ var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+      sb.style.width = (max>0 ? (window.pageYOffset||h.scrollTop)/max*100 : 0)+'%'; }
+    addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  }
+
+  /* лёгкий параллакс hero-картинки за курсором */
+  var art = document.querySelector('.hero-art');
+  if(art && !reduce && matchMedia('(pointer:fine)').matches){
+    addEventListener('mousemove', function(e){
+      var x = (e.clientX/innerWidth - .5), y = (e.clientY/innerHeight - .5);
+      art.style.transform = 'translate('+(x*14)+'px,'+(y*14)+'px)';
+    });
+  }
 })();
 </script>
 </body>
