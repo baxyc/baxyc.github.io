@@ -188,6 +188,16 @@ footer a:hover{color:var(--gold-light)}
 footer .fb{display:flex;align-items:center;gap:11px;margin-bottom:12px}
 footer .bottom{border-top:1px solid var(--line-soft);margin-top:34px;padding-top:18px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
+/* social buttons */
+.socials{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.socbtn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:14.5px;border-radius:40px;padding:11px 18px;border:1px solid var(--line);background:var(--bg-card);color:var(--ink);box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+.socbtn:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:var(--shadow-lg)}
+.socbtn svg{width:20px;height:20px;flex:none}
+.soc-ig svg{color:#e1306c}
+.soc-tg svg{color:#2aabee}
+.soc-max svg{color:#7c5cff}
+.socials.center{justify-content:center}
+
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(6,10,18,.95);backdrop-filter:blur(4px);touch-action:pan-y}
 .lb.open{display:flex}
