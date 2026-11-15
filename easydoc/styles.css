@@ -197,6 +197,9 @@ footer .bottom{border-top:1px solid var(--line-soft);margin-top:34px;padding-top
 .soc-tg svg{color:#2aabee}
 .soc-max svg{color:#7c5cff}
 .socials.center{justify-content:center}
+.socials-bar{margin:0;gap:8px}
+.socials-bar .socbtn{width:42px;height:42px;padding:0;justify-content:center}
+footer .bottom{align-items:center}
 
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(6,10,18,.95);backdrop-filter:blur(4px);touch-action:pan-y}
