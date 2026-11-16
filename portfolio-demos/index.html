@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Портфолио — лендинги под ключ</title>
+<meta name="description" content="Примеры продающих лендингов: курсы, бьюти, товар, детейлинг, фитнес. Лендинги под ключ на Framer/Webflow и HTML.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap">
+<style>
+:root{--navy:#0a1220;--navy2:#0f1a2e;--gold:#d9b46a;--gold2:#f0d39a;--ink:#eaf0fb;--muted:#9fb0c8;--line:rgba(217,180,106,.22);--maxw:1160px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Manrope",system-ui,sans-serif;background:radial-gradient(120% 90% at 80% -10%,#13233f,var(--navy) 60%);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(18px,4vw,40px)}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));z-index:50}
+header{position:sticky;top:0;z-index:40;backdrop-filter:blur(12px);background:rgba(10,18,32,.7);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;letter-spacing:.02em;font-size:1.15rem;display:flex;gap:10px;align-items:center}
+.logo b{color:var(--gold)}
+.logo .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2))}
+.pill{font-size:.82rem;font-weight:700;color:var(--gold);border:1px solid var(--line);padding:7px 14px;border-radius:999px}
+.hero{padding:clamp(48px,9vw,104px) 0 clamp(28px,4vw,48px)}
+.eyebrow{color:var(--gold);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.02em;margin:14px 0;line-height:1.05}
+h1 span{background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);max-width:60ch;font-size:clamp(1rem,1.4vw,1.15rem)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{font-size:.85rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.03)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;padding-block:clamp(20px,4vw,44px)}
+.card{position:relative;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--navy2);transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(0,0,0,.8);border-color:var(--gold)}
+.shot{aspect-ratio:16/10;background:linear-gradient(135deg,var(--a1),var(--a2));background-size:cover;background-position:center;position:relative}
+.shot::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.08) 0 2px,transparent 2px 14px)}
+.shot.has-img::after{display:none}
+.shot.has-img{box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.shot .tag{position:absolute;top:12px;left:12px;font-size:.75rem;font-weight:700;color:#111;background:rgba(255,255,255,.92);padding:5px 10px;border-radius:8px}
+.card__body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card__body h3{font-size:1.2rem;font-weight:800}
+.card__body p{color:var(--muted);font-size:.94rem;flex:1}
+.card__foot{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+.price{font-weight:800;color:var(--gold)}
+.open{font-weight:700;color:var(--ink);display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);padding:8px 14px;border-radius:999px;transition:.2s}
+.card:hover .open{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;border-color:transparent}
+.cta{margin:clamp(20px,5vw,60px) 0;border:1px solid var(--line);border-radius:24px;padding:clamp(26px,5vw,52px);background:linear-gradient(135deg,rgba(217,180,106,.14),rgba(217,180,106,.03));display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.cta h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800}
+.cta p{color:var(--muted);max-width:46ch}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;padding:14px 26px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;white-space:nowrap;transition:transform .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.cta{flex-direction:column;align-items:flex-start}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="progress"></div>
+<header><div class="container nav">
+  <a href="#" class="logo"><span class="dot"></span>лендинги<b>.портфолио</b></a>
+  <span class="pill">HTML / CSS / JS · 8 архетипов · под ключ</span>
+</div></header>
+
+<main class="container">
+  <section class="hero">
+    <span class="eyebrow">Примеры работ</span>
+    <h1>Продающие лендинги <span>под любую нишу</span></h1>
+    <p class="lead">Восемь демо-проектов, каждый — на своём визуальном архетипе: классические сплит-лендинги, glass/bento для IT, editorial-журнал для студии и brutalist-плакат для ивента. Все адаптивные, с формами, анимацией и упором на заявку, а не просто «красивый сайт».</p>
+    <div class="chips">
+      <span class="chip">Адаптив под телефон</span>
+      <span class="chip">Формы и аналитика</span>
+      <span class="chip">Анимация при скролле</span>
+      <span class="chip">Срок 3–6 дней</span>
+    </div>
+  </section>
+
+  <section class="grid">
+    <a class="card" href="mentor-smm/index.html" style="--a1:#5b4bff;--a2:#b13bff">
+      <div class="shot has-img" style="background-image:url('assets/img/thumbs/mentor-smm.jpg')"><span class="tag">Онлайн-курс</span></div>
+      <div class="card__body"><h3>Профессия SMM</h3><p>Лендинг курса с нуля до профессии: программа, тарифы, отзывы, квиз-заявка.</p><div class="card__foot"><span class="price">от 8 000 ₽</span><span class="open">Открыть →</span></div></div>
+    </a>
+    <a class="card" href="beauty-studio/index.html" style="--a1:#d96a92;--a2:#c9a24b">
+      <div class="shot has-img" style="background-image:url('assets/img/thumbs/beauty-studio.jpg')"><span class="tag">Локальная услуга</span></div>
+      <div class="card__body"><h3>Студия красоты Aurelle</h3><p>Прайс-лист, мастера, галерея работ и онлайн-запись с напоминанием.</p><div class="card__foot"><span class="price">от 8 000 ₽</span><span class="open">Открыть →</span></div></div>
+    </a>
+    <a class="card" href="coffee-brand/index.html" style="--a1:#6f4e37;--a2:#c08a4a">
+      <div class="shot has-img" style="background-image:url('assets/img/thumbs/coffee-brand.jpg')"><span class="tag">Товар / DTC</span></div>
+      <div class="card__body"><h3>Roast Lab — кофе</h3><p>Интерактивный квиз подбора сорта, каталог, подписка и промокод на первый заказ.</p><div class="card__foot"><span class="price">от 12 000 ₽</span><span class="open">Открыть →</span></div></div>
+    </a>
+    <a class="card" href="auto-detailing/index.html" style="--a1:#e23b3b;--a2:#ff7a18">
+      <div class="shot has-img" style="background-image:url('assets/img/thumbs/auto-detailing.jpg')"><span class="tag">Детейлинг</span></div>
+      <div class="card__body"><h3>BLACKPOINT</h3><p>Тёмный премиум-лендинг: услуги, процесс, до/после, пакеты и расчёт стоимости.</p><div class="card__foot"><span class="price">от 12 000 ₽</span><span class="open">Открыть →</span></div></div>
+    </a>
+    <a class="card" href="fitness-studio/index.html" style="--a1:#ff6a00;--a2:#ee2b6b">
+      <div class="shot has-img" style="background-image:url('assets/img/thumbs/fitness-studio.jpg')"><span class="tag">Фитнес</span></div>
+      <div class="card__body"><h3>Студия PULSE</h3><p>Направления, живое расписание классов, абонементы и запись на пробную.</p><div class="card__foot"><span class="price">от 8 000 ₽</span><span class="open">Открыть →</span></div></div>
+    </a>
+    <a class="card" href="nexus-saas/index.html" style="--a1:#4f46e5;--a2:#06b6d4">
+      <div class="shot has-img" style="background-image:url('assets/img/thumbs/nexus-saas.jpg')"><span class="tag">SaaS / AI</span></div>
+      <div class="card__body"><h3>NEXUS — AI-аналитика</h3><p>Другой архетип: glassmorphism, bento-сетка и мокап продукта вместо привычных блоков.</p><div class="card__foot"><span class="price">от 12 000 ₽</span><span class="open">Открыть →</span></div></div>
+    </a>
+    <a class="card" href="atelier-studio/index.html" style="--a1:#a8563a;--a2:#c9bda9">
+      <div class="shot has-img" style="background-image:url('assets/img/thumbs/atelier-studio.jpg')"><span class="tag">Арх-студия</span></div>
+      <div class="card__body"><h3>ATELIER — бюро</h3><p>Editorial-журнал: крупный serif, индекс проектов и горизонтальная галерея. Минимум и воздух.</p><div class="card__foot"><span class="price">от 12 000 ₽</span><span class="open">Открыть →</span></div></div>
+    </a>
+    <a class="card" href="wave-festival/index.html" style="--a1:#c6ff00;--a2:#ff2e97">
+      <div class="shot has-img" style="background-image:url('assets/img/thumbs/wave-festival.jpg')"><span class="tag">Фестиваль</span></div>
+      <div class="card__body"><h3>WAVE FEST</h3><p>Brutalist-плакат: кислотный цвет, огромныйAnton, стикеры и рабочий countdown до старта.</p><div class="card__foot"><span class="price">от 10 000 ₽</span><span class="open">Открыть →</span></div></div>
+    </a>
+    <a class="card" href="https://baxyc.github.io/easydoc/" target="_blank" rel="noopener" style="--a1:#0a1220;--a2:#d9b46a">
+      <div class="shot"><span class="tag">Живой проект</span></div>
+      <div class="card__body"><h3>EasyDoc China</h3><p>Реальный задеплоенный сайт агентства по поступлению в Китае — тёмно-синий + золото.</p><div class="card__foot"><span class="price">live-кейс</span><span class="open">Открыть ↗</span></div></div>
+    </a>
+  </section>
+
+  <section class="cta">
+    <div><h2>Нужен лендинг под вашу нишу?</h2><p>Соберу структуру, тексты и дизайн под ключ за 3–6 дней. Покажите идею — предложу вариант бесплатно.</p></div>
+    <a href="https://t.me/Zhanna_Ivanlove" target="_blank" rel="noopener" class="btn">Обсудить проект →</a>
+  </section>
+</main>
+
+<footer class="container">
+  <span>© <span id="y">2026</span> портфолио лендингов — демо-проекты</span>
+  <a href="https://baxyc.github.io/" target="_blank" rel="noopener" class="btn btn--ghost">Моё основное портфолио ↗</a>
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+var bar=document.querySelector('.progress');
+function s(){var h=document.documentElement;var m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?(h.scrollTop/m)*100:0)+'%';}
+document.addEventListener('scroll',s,{passive:true});s();
+</script>
+</body>
+</html>

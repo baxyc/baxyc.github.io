@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Студия красоты Aurelle — запись онлайн</title>
+<meta name="description" content="Студия красоты Aurelle в центре города. Маникюр, брови, окрашивание, уходы. Запись онлайн, мастера с опытом от 5 лет.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+:root{--bg:#fff7f5;--bg-soft:#fdeee9;--card:#ffffff;--ink:#2a1c22;--muted:#8a6f78;
+--accent:#d96a92;--accent-2:#c9a24b;--on-accent:#fff;--border:#f0ddd6;--radius:22px;
+--font-display:"Playfair Display",Georgia,serif;--font-body:"Manrope",system-ui,sans-serif}
+.hero__media .mock{border-radius:22px}
+.price__amt{font-family:var(--font-display)}
+.g-item{background:url('../assets/img/salon-hero.jpg') center/cover no-repeat}
+.g-item:nth-child(2n),.g-item:nth-child(3n){filter:none}
+</style>
+</head>
+<body>
+<div class="progress"></div>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="#" class="logo"><span class="logo__mark">A</span>Aurelle</a>
+    <nav class="nav__links">
+      <a href="#services">Услуги</a>
+      <a href="#masters">Мастера</a>
+      <a href="#gallery">Работы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="nav__cta">
+      <a href="#book" class="btn btn--primary btn--sm">Записаться</a>
+      <button class="burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero hero--reverse">
+  <div class="hero__bg"></div>
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <span class="badge badge--dot">Свободные окна сегодня</span>
+      <h1>Студия красоты <span class="grad-text">Aurelle</span> в центре города</h1>
+      <p class="lead">Маникюр, брови, окрашивание и уходы от мастеров с опытом от 5 лет. Стерильно, красиво и без очередей — запись онлайн за 30 секунд.</p>
+      <div class="hero__cta">
+        <a href="#book" class="btn btn--primary">Записаться онлайн</a>
+        <a href="tel:+70000000000" class="btn btn--ghost">Позвонить</a>
+      </div>
+      <div class="hero__trust">
+        <div class="avatars">
+          <img src="https://ui-avatars.com/api/?name=Ольга&background=d96a92&color=fff" alt="">
+          <img src="https://ui-avatars.com/api/?name=Кристина&background=c9a24b&color=fff" alt="">
+          <img src="https://ui-avatars.com/api/?name=Мария&background=e0518a&color=fff" alt="">
+        </div>
+        <div><span class="stars">★★★★★</span><br><small>4.8 · 640 отзывов · 7 лет работаем</small></div>
+      </div>
+    </div>
+    <div class="hero__media reveal">
+      <div class="mock photo" style="--pc:url('../assets/img/salon-hero.jpg')"></div>
+      <div class="chip c1"><span class="ic">💅</span><div>Маникюр<small>от 1 800 ₽</small></div></div>
+      <div class="chip c2"><span class="ic">✨</span><div>Брови<small>от 900 ₽</small></div></div>
+      <div class="chip c3"><span class="ic">🌸</span><div>Уход<small>от 2 500 ₽</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="services">
+  <div class="container">
+    <div class="section-head center reveal"><span class="eyebrow">Услуги</span><h2>Прайс-лист</h2><p class="lead">Фиксированные цены, без доплат «на месте». Скидка 10% на первое посещение.</p></div>
+    <div class="grid cols-2">
+      <div class="card price reveal" style="flex-direction:row;justify-content:space-between;align-items:center;gap:16px"><div><div class="price__name">Комбинированный маникюр</div><small style="color:var(--muted)">покрытие гель-лак</small></div><div class="price__amt" style="font-size:1.5rem">1 800 ₽</div></div>
+      <div class="card price reveal" data-d="1" style="flex-direction:row;justify-content:space-between;align-items:center;gap:16px"><div><div class="price__name">Окрашивание в один тон</div><small style="color:var(--muted)">+ уход</small></div><div class="price__amt" style="font-size:1.5rem">4 500 ₽</div></div>
+      <div class="card price reveal" style="flex-direction:row;justify-content:space-between;align-items:center;gap:16px"><div><div class="price__name">Архитектура бровей</div><small style="color:var(--muted)">окрашивание + коррекция</small></div><div class="price__amt" style="font-size:1.5rem">1 400 ₽</div></div>
+      <div class="card price reveal" data-d="1" style="flex-direction:row;justify-content:space-between;align-items:center;gap:16px"><div><div class="price__name">Чистка лица</div><small style="color:var(--muted)">ультразвук + маска</small></div><div class="price__amt" style="font-size:1.5rem">2 500 ₽</div></div>
+      <div class="card price reveal" style="flex-direction:row;justify-content:space-between;align-items:center;gap:16px"><div><div class="price__name">Наращивание ресниц</div><small style="color:var(--muted)">классика / объём</small></div><div class="price__amt" style="font-size:1.5rem">2 200 ₽</div></div>
+      <div class="card price reveal" data-d="1" style="flex-direction:row;justify-content:space-between;align-items:center;gap:16px"><div><div class="price__name">Вечерняя укладка</div><small style="color:var(--muted)">на мероприятие</small></div><div class="price__amt" style="font-size:1.5rem">1 600 ₽</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="masters">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Команда</span><h2>Мастера, которым доверяют</h2></div>
+    <div class="grid cols-3">
+      <div class="card feature reveal"><div class="ic" style="background:linear-gradient(135deg,#d96a92,#e0518a)">💅</div><h3>Ольга</h3><p>Мастер маникюра, 8 лет. Сертификат по аппаратной технике и дизайну.</p></div>
+      <div class="card feature reveal" data-d="1"><div class="ic" style="background:linear-gradient(135deg,#c9a24b,#d96a92)">💇</div><h3>Кристина</h3><p>Колорист, 6 лет. Сложные окрашивания, Airtouch, восстановление.</p></div>
+      <div class="card feature reveal" data-d="2"><div class="ic" style="background:linear-gradient(135deg,#e0518a,#c9a24b)">🌸</div><h3>Мария</h3><p>Косметолог, 7 лет. Уходы, чистки, работа с проблемной кожей.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="gallery">
+  <div class="container">
+    <div class="section-head center reveal"><span class="eyebrow">Портфолио</span><h2>Наши работы</h2></div>
+    <div class="gallery reveal">
+      <div class="g-item" data-label="Маникюр"></div>
+      <div class="g-item" data-label="Окрашивание"></div>
+      <div class="g-item" data-label="Брови"></div>
+      <div class="g-item" data-label="Уход"></div>
+      <div class="g-item" data-label="Ресницы"></div>
+      <div class="g-item" data-label="Укладка"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-head center reveal"><span class="eyebrow">Отзывы</span><h2>Что говорят гости</h2></div>
+    <div class="grid cols-3">
+      <div class="review reveal"><span class="stars">★★★★★</span><p>«Хожу полгода — маникюр держится 3 недели, всегда чисто и вежливо. Запись онлайн — вообще мечта.»</p><div class="review__who"><img src="https://ui-avatars.com/api/?name=Екатерина&background=d96a92&color=fff" alt=""><div><b>Екатерина</b><small>постоянный гость</small></div></div></div>
+      <div class="review reveal" data-d="1"><span class="stars">★★★★★</span><p>«Кристина вернула волосы после неудачного окрашивания в другом салоне. Спасибо огромное!»</p><div class="review__who"><img src="https://ui-avatars.com/api/?name=Дарья&background=c9a24b&color=fff" alt=""><div><b>Дарья</b><small>окрашивание</small></div></div></div>
+      <div class="review reveal" data-d="2"><span class="stars">★★★★★</span><p>«Уютно, не навязчиво, без ощущения конвейера. Кофе, музыка, результат — всё на уровне.»</p><div class="review__who"><img src="https://ui-avatars.com/api/?name=Вера&background=e0518a&color=fff" alt=""><div><b>Вера</b><small>уход за лицом</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="book">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="eyebrow">Запись</span>
+        <h2 style="margin:14px 0 8px">Забронируйте удобное окно</h2>
+        <p class="lead">Оставьте контакты — администратор перезвонит в течение 15 минут и подтвердит запись. Работаем ежедневно 9:00–21:00.</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Напоминание о визите в WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Перенос записи без штрафов</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Скидка 10% на первый визит</li>
+        </ul>
+      </div>
+      <form class="form card" style="padding:28px">
+        <div class="form__body">
+          <div class="field"><label>Имя</label><input required placeholder="Ваше имя"></div>
+          <div class="field"><label>Телефон</label><input required placeholder="+7 (___) ___-__-__"></div>
+          <div class="field"><label>Услуга</label><select><option>Маникюр</option><option>Окрашивание</option><option>Брови</option><option>Уход за лицом</option><option>Ресницы</option></select></div>
+          <button class="btn btn--primary btn--block">Записаться</button>
+          <p class="form__note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+        </div>
+        <div class="form__success">✅ Спасибо! Мы перезвоним вам в течение 15 минут.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer id="contacts">
+  <div class="container">
+    <div class="cols">
+      <div class="brand"><a href="#" class="logo"><span class="logo__mark">A</span>Aurelle</a><p>Студия красоты полного цикла. Стерильно, красиво, по записи.</p><div class="socials"><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3 0 4.1.1 1 .1 1.7.2 2.3.5 1.2.5 2 1.3 2.5 2.5.3.6.4 1.3.5 2.3.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c-.1 1-.2 1.7-.5 2.3a3.9 3.9 0 0 1-2.5 2.5c-.6.3-1.3.4-2.3.5-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-1-.1-1.7-.2-2.3-.5a3.9 3.9 0 0 1-2.5-2.5c-.3-.6-.4-1.3-.5-2.3C2 15 2 14.7 2 12s0-3 .1-4.1c.1-1 .2-1.7.5-2.3A3.9 3.9 0 0 1 5.1 3c.6-.3 1.3-.4 2.3-.5C8.5 2 8.8 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.5-3.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg></a><a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm5.3 14.3c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.6-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.4.4-.1.8.2.4 1 1.6 2.2 2.2 1.2.7 1.4.6 1.6.5l.8-.8c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2z"/></svg></a></div></div>
+      <div><h4>Услуги</h4><ul><li><a href="#services">Маникюр</a></li><li><a href="#services">Волосы</a></li><li><a href="#services">Брови и ресницы</a></li><li><a href="#services">Косметология</a></li></ul></div>
+      <div><h4>Студия</h4><ul><li><a href="#masters">Мастера</a></li><li><a href="#gallery">Работы</a></li><li><a href="#reviews">Отзывы</a></li><li><a href="#book">Запись</a></li></ul></div>
+      <div><h4>Контакты</h4><ul><li>ул. Цветочная, 12</li><li><a href="tel:+70000000000">+7 000 000-00-00</a></li><li><a href="mailto:hello@aurelle.ru">hello@aurelle.ru</a></li><li>Ежедневно 9:00–21:00</li></ul></div>
+    </div>
+    <div class="bottom"><span>© <span data-year>2026</span> Aurelle — демо-проект лендинга</span><span>Политика конфиденциальности</span></div>
+  </div>
+</footer>
+
+<script src="../assets/base.js"></script>
+</body>
+</html>

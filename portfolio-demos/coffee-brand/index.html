@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roast Lab — свежая обжарка кофе с доставкой</title>
+<meta name="description" content="Спешелти-кофе свежей обжарки с доставкой по России. Обжариваем в день заказа. Подберём ваш сорт за 30 секунд.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+:root{--bg:#f7f1e8;--bg-soft:#efe4d4;--card:#fffdf9;--ink:#2b2018;--muted:#7a6a58;
+--accent:#6f4e37;--accent-2:#c08a4a;--on-accent:#fff;--border:#e4d6c2;--radius:20px;
+--font-display:"Cormorant Garamond",Georgia,serif;--font-body:"Manrope",system-ui,sans-serif}
+.price__amt{font-family:var(--font-display)}
+.quiz{display:grid;gap:22px}
+.qopts{display:flex;flex-wrap:wrap;gap:10px}
+.qopt{padding:12px 18px;border-radius:999px;border:1.5px solid var(--border);background:var(--card);font-weight:600;cursor:pointer;transition:.15s}
+.qopt:hover{border-color:var(--accent)}
+.qopt.sel{background:var(--grad);color:#fff;border-color:transparent}
+.qstep{display:none}.qstep.active{display:block}
+.qstep h3{margin-bottom:12px}
+.qbar{display:flex;gap:6px}.qbar i{height:4px;flex:1;border-radius:4px;background:var(--border)}.qbar i.on{background:var(--accent)}
+</style>
+</head>
+<body>
+<div class="progress"></div>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="#" class="logo"><span class="logo__mark">R</span>Roast Lab</a>
+    <nav class="nav__links">
+      <a href="#why">Почему мы</a>
+      <a href="#shop">Каталог</a>
+      <a href="#quiz">Подбор</a>
+      <a href="#sub">Подписка</a>
+      <a href="#reviews">Отзывы</a>
+    </nav>
+    <div class="nav__cta">
+      <a href="#shop" class="btn btn--primary btn--sm">Заказать</a>
+      <button class="burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero hero--center">
+  <div class="hero__bg"></div>
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <span class="badge badge--dot">Обжарка в день заказа</span>
+      <h1>Кофе, который обжигают <span class="grad-text">для вас</span>, а не для склада</h1>
+      <p class="lead">Спешелти-зёрна свежей обжарки с доставкой по России. На упаковке — дата обжарки, а не «лучше до». Первый заказ со скидкой 20%.</p>
+      <div class="hero__cta">
+        <a href="#quiz" class="btn btn--primary">Подобрать мой сорт</a>
+        <a href="#shop" class="btn btn--ghost">Смотреть каталог</a>
+      </div>
+      <div class="hero__trust">
+        <div class="avatars">
+          <img src="https://ui-avatars.com/api/?name=А&background=6f4e37&color=fff" alt="">
+          <img src="https://ui-avatars.com/api/?name=К&background=c08a4a&color=fff" alt="">
+          <img src="https://ui-avatars.com/api/?name=Д&background=8a5a3c&color=fff" alt="">
+        </div>
+        <div><span class="stars">★★★★★</span><br><small>4.9 · 3 800 заказов · 12 сортов</small></div>
+      </div>
+    </div>
+    <div class="hero__media reveal">
+      <div class="mock photo" style="--pc:url('../assets/img/coffee-hero.jpg')"></div>
+      <div class="chip c1"><span class="ic">🔥</span><div>Свежая<small>обжарка 0 дней</small></div></div>
+      <div class="chip c2"><span class="ic">🚚</span><div>Доставка<small>по всей РФ</small></div></div>
+      <div class="chip c3"><span class="ic">🌱</span><div>Спешелти<small>84+ SCA</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="why">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Почему Roast Lab</span><h2>Кофе без компромиссов</h2></div>
+    <div class="grid cols-3">
+      <div class="card feature reveal"><div class="ic">📅</div><h3>Дата обжарки на пачке</h3><p>Обжариваем малыми партиями после заказа — зерно попадает к вам свежим.</p></div>
+      <div class="card feature reveal" data-d="1"><div class="ic">🎯</div><h3>Подбор под ваш вкус</h3><p>Квиз за 30 секунд определит сорт: кислинка, плотность, назначение — эспрессо или фильтр.</p></div>
+      <div class="card feature reveal" data-d="2"><div class="ic">♻️</div><h3>Честная цена</h3><p>Без наценки сетей. Прямые закупки у ферм и собственная обжарка.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="container">
+    <div class="section-head center reveal"><span class="eyebrow">Каталог</span><h2>Выберите свой сорт</h2></div>
+    <div class="grid cols-3">
+      <div class="card price reveal"><div class="price__name">Эфиопия Иргачефф</div><p style="font-size:.9rem">Жасмин, персик, чайная кислинка</p><div class="price__amt">690 ₽ <span>250 г</span></div><a href="#quiz" class="btn btn--ghost btn--block">В корзину</a></div>
+      <div class="card price price--feat reveal" data-d="1"><span class="badge tag" style="background:#fff;color:var(--ink)">Хит</span><div class="price__name">Колумбия Уила</div><p style="font-size:.9rem;color:rgba(255,255,255,.9)">Шоколад, карамель, орех</p><div class="price__amt">640 ₽ <span>250 г</span></div><a href="#quiz" class="btn btn--block btn--light">В корзину</a></div>
+      <div class="card price reveal" data-d="2"><div class="price__name">Деcaf Swiss Water</div><p style="font-size:.9rem">Какао, фундук, без кофеина</p><div class="price__amt">720 ₽ <span>250 г</span></div><a href="#quiz" class="btn btn--ghost btn--block">В корзину</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="quiz">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Подбор за 30 секунд</span>
+      <h2 style="margin:14px 0 8px">Какой кофе — ваш?</h2>
+      <p class="lead">Ответьте на 3 вопроса, и мы предложим сорт под ваш вкус и способ приготовления. Первый заказ — со скидкой 20%.</p>
+    </div>
+    <div class="card" style="padding:28px">
+      <div class="qbar" style="margin-bottom:20px"><i class="on"></i><i></i><i></i></div>
+      <form class="quiz" id="quiz">
+        <div class="qstep active" data-step="1">
+          <h3>Как готовите чаще всего?</h3>
+          <div class="qopts" data-group="brew"><button type="button" class="qopt">Эспрессо-машина</button><button type="button" class="qopt">Гейзерная</button><button type="button" class="qopt">Фильтр / воронка</button><button type="button" class="qopt">Френч-пресс</button></div>
+        </div>
+        <div class="qstep" data-step="2">
+          <h3>Какой вкус ближе?</h3>
+          <div class="qopts" data-group="taste"><button type="button" class="qopt">Шоколад и орех</button><button type="button" class="qopt">Фрукты и кислинка</button><button type="button" class="qopt">Сбалансированный</button></div>
+        </div>
+        <div class="qstep" data-step="3">
+          <h3>Куда отправить и куда прислать скидку?</h3>
+          <div class="field"><input required placeholder="Город"></div>
+          <div class="field" style="margin-top:12px"><input required placeholder="Email или телефон"></div>
+        </div>
+        <div style="display:flex;gap:12px;margin-top:6px">
+          <button type="button" class="btn btn--ghost" id="qback" style="visibility:hidden">Назад</button>
+          <button type="button" class="btn btn--primary" id="qnext">Далее</button>
+        </div>
+      </form>
+      <div class="form__success" id="qresult" style="display:none"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sub">
+  <div class="container">
+    <div class="section-head center reveal"><span class="eyebrow">Подписка</span><h2>Кофе по подписке — дешевле и без забот</h2></div>
+    <div class="grid cols-3">
+      <div class="card price reveal"><div class="price__name">Раз в месяц</div><div class="price__amt">590 ₽ <span>/мес</span></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>250 г свежеобжаренного</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Бесплатная доставка</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Отмена в любой момент</li></ul><a href="#quiz" class="btn btn--ghost btn--block">Оформить</a></div>
+      <div class="card price price--feat reveal" data-d="1"><span class="badge tag" style="background:#fff;color:var(--ink)">Выгодно</span><div class="price__name">Раз в 2 недели</div><div class="price__amt">1 090 ₽ <span>/мес</span></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>500 г в месяц</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Дегустация нового сорта</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Скидка 15% на помол</li></ul><a href="#quiz" class="btn btn--block btn--light">Оформить</a></div>
+      <div class="card price reveal" data-d="2"><div class="price__name">Для офиса</div><div class="price__amt">по запросу</div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>От 2 кг в месяц</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Персональный менеджер</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Закрывающие документы</li></ul><a href="#quiz" class="btn btn--ghost btn--block">Оставить заявку</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div class="marquee__track">
+  <span>Эфиопия</span><span>Колумбия</span><span>Кения</span><span>Бразилия</span><span>Гватемала</span><span>Руанда</span>
+  <span>Эфиопия</span><span>Колумбия</span><span>Кения</span><span>Бразилия</span><span>Гватемала</span><span>Руанда</span>
+</div></div>
+
+<section class="section section--soft" id="reviews">
+  <div class="container">
+    <div class="section-head center reveal"><span class="eyebrow">Отзывы</span><h2>Любители кофе о нас</h2></div>
+    <div class="grid cols-3">
+      <div class="review reveal"><span class="stars">★★★★★</span><p>«Наконец-то кофе, где дата обжарки реальная. Аромат при вскрытии пачки — космос.»</p><div class="review__who"><img src="https://ui-avatars.com/api/?name=Сергей&background=6f4e37&color=fff" alt=""><div><b>Сергей</b><small>воронка V60</small></div></div></div>
+      <div class="review reveal" data-d="1"><span class="stars">★★★★★</span><p>«Подписка — гениально. Не думаю о заказе, кофе всегда свежий, доставка бесплатная.»</p><div class="review__who"><img src="https://ui-avatars.com/api/?name=Настя&background=c08a4a&color=fff" alt=""><div><b>Анастасия</b><small>эспрессо</small></div></div></div>
+      <div class="review reveal" data-d="2"><span class="stars">★★★★★</span><p>«Квиз точно угадал: люблю кислинку, подсказали Иргачефф — мой сорт.»</p><div class="review__who"><img src="https://ui-avatars.com/api/?name=Павел&background=8a5a3c&color=fff" alt=""><div><b>Павел</b><small>френч-пресс</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="cols">
+      <div class="brand"><a href="#" class="logo"><span class="logo__mark">R</span>Roast Lab</a><p>Спешелти-кофе свежей обжарки с доставкой по России.</p><div class="socials"><a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.8 15.6l-.4 3.7c.5 0 .7-.2 1-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.7-.8l3-14.1c.3-1.3-.5-1.9-1.4-1.5L3.6 9.3c-1.3.5-1.3 1.2-.2 1.5l4.4 1.4 6.8-4.3c.8-.5 1.5-.2 1 .4z"/></svg></a><a href="#" aria-label="VK"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 17c-5 0-8-3.5-8.2-9.4h2.5c.1 4.3 2 6.1 3.4 6.5V7.6h2.4v3.6c1.4-.2 2.8-1.8 3.3-3.6h2.3c-.4 2.1-1.8 3.7-2.9 4.4 1.1.6 2.7 2 3.4 4.6h-2.6c-.5-1.7-1.9-3-3.5-3.2V17z"/></svg></a></div></div>
+      <div><h4>Каталог</h4><ul><li><a href="#shop">Сорта</a></li><li><a href="#sub">Подписка</a></li><li><a href="#quiz">Подбор</a></li><li><a href="#">Оборудование</a></li></ul></div>
+      <div><h4>Помощь</h4><ul><li><a href="#">Доставка и оплата</a></li><li><a href="#">Возврат</a></li><li><a href="#reviews">Отзывы</a></li><li><a href="#">Контакты</a></li></ul></div>
+      <div><h4>Контакты</h4><ul><li><a href="mailto:hi@roastlab.ru">hi@roastlab.ru</a></li><li><a href="tel:+70000000000">+7 000 000-00-00</a></li><li>Обжарка: ежедневно</li></ul></div>
+    </div>
+    <div class="bottom"><span>© <span data-year>2026</span> Roast Lab — демо-проект лендинга</span><span>Политика конфиденциальности · Оферта</span></div>
+  </div>
+</footer>
+
+<script src="../assets/base.js"></script>
+<script>
+(function(){
+  var quiz=document.getElementById('quiz'); if(!quiz) return;
+  var steps=[...quiz.querySelectorAll('.qstep')], cur=0, ans={};
+  var next=document.getElementById('qnext'), back=document.getElementById('qback'), bar=document.querySelector('.qbar');
+  quiz.querySelectorAll('.qopts').forEach(function(g){
+    g.addEventListener('click',function(e){
+      var b=e.target.closest('.qopt'); if(!b) return;
+      g.querySelectorAll('.qopt').forEach(function(x){x.classList.remove('sel')});
+      b.classList.add('sel'); ans[g.dataset.group]=b.textContent;
+    });
+  });
+  function show(){
+    steps.forEach(function(s,i){s.classList.toggle('active',i===cur)});
+    back.style.visibility=cur===0?'hidden':'visible';
+    next.textContent=cur===steps.length-1?'Показать сорт':'Далее';
+    bar.querySelectorAll('i').forEach(function(d,i){d.classList.toggle('on',i<=cur)});
+  }
+  next.addEventListener('click',function(){
+    if(cur<steps.length-1){cur++;show();return;}
+    var email=quiz.querySelector('input[placeholder*="Email"]');
+    if(email && !email.value.trim()){email.focus();return;}
+    var taste=ans.taste||'сбалансированный';
+    var pick = taste.indexOf('Фрукты')>-1?'Эфиопия Иргачефф':taste.indexOf('Шоколад')>-1?'Колумбия Уила':'Сбалансированный бленд «Доминикана»';
+    quiz.style.display='none';
+    var r=document.getElementById('qresult');
+    r.style.display='flex';
+    r.innerHTML='🎉 Ваш сорт: <b>'+pick+'</b>. Промокод <b>FRESH20</b> на первый заказ отправлен на почту.';
+  });
+  back.addEventListener('click',function(){if(cur>0){cur--;show();}});
+  show();
+})();
+</script>
+</body>
+</html>
